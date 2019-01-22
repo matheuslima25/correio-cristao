@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="463cf11a-8a43-457a-87a2-936826d8c5a5" name="Default Changelist" comment="" />
+    <list default="true" id="463cf11a-8a43-457a-87a2-936826d8c5a5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/correiocristao/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correiocristao/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/correiocristao/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correiocristao/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/correiocristao/postbase.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correiocristao/postbase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,18 +34,19 @@
           <entry key="Procfile" value="2" />
           <entry key="env" value="1" />
           <entry key="gitgnore" value="2" />
-          <entry key="html" value="5" />
+          <entry key="html" value="7" />
           <entry key="jpg" value="4" />
-          <entry key="py" value="17" />
+          <entry key="png" value="1" />
+          <entry key="py" value="18" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="5" />
-          <entry key="Image" value="4" />
+          <entry key="HTML" value="7" />
+          <entry key="Image" value="5" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="17" />
+          <entry key="Python" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -46,16 +54,16 @@
           <entry key="Procfile" value="14" />
           <entry key="env" value="7" />
           <entry key="gitgnore" value="5" />
-          <entry key="html" value="670" />
-          <entry key="py" value="344" />
+          <entry key="html" value="721" />
+          <entry key="py" value="366" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="670" />
+          <entry key="HTML" value="721" />
           <entry key="PLAIN_TEXT" value="28" />
-          <entry key="Python" value="344" />
+          <entry key="Python" value="366" />
         </counts>
       </usages-collector>
     </session>
@@ -65,17 +73,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/correiocristao/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="37" selection-start-column="37" selection-end-column="37" />
+            <state relative-caret-position="51">
+              <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/correiocristao/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="73" selection-start-line="73" selection-end-line="73" selection-end-column="18" />
+              <folding>
+                <element signature="n#block#3;n#!!top" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/logo.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/correiocristao/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="134" column="21" lean-forward="true" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
+            <state relative-caret-position="358">
+              <caret line="134" column="49" selection-start-line="134" selection-start-column="49" selection-end-line="134" selection-end-column="49" />
               <folding>
                 <element signature="e#315#324#0" expanded="true" />
               </folding>
@@ -99,17 +125,15 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/correiocristao" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/noticias/models.py" />
         <option value="$PROJECT_DIR$/templates/correiocristao/login.html" />
-        <option value="$PROJECT_DIR$/templates/correiocristao/base.html" />
         <option value="$PROJECT_DIR$/noticias/urls.py" />
         <option value="$PROJECT_DIR$/noticias/views.py" />
-        <option value="$PROJECT_DIR$/templates/correiocristao/index.html" />
         <option value="$PROJECT_DIR$/correiocristao/urls.py" />
         <option value="$PROJECT_DIR$/correiocristao/wsgi.py" />
         <option value="$PROJECT_DIR$/requirements-dev.txt" />
@@ -118,6 +142,8 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/.gitgnore" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/templates/correiocristao/index.html" />
+        <option value="$PROJECT_DIR$/templates/correiocristao/base.html" />
         <option value="$PROJECT_DIR$/correiocristao/settings.py" />
       </list>
     </option>
@@ -158,6 +184,11 @@
             <path>
               <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
               <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -186,6 +217,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\static" />
+      <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\media" />
       <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\templates\accounts" />
     </key>
   </component>
@@ -216,8 +249,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23024316" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23024316" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -231,7 +265,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.44262296" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.52786887" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -364,17 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
-          <folding>
-            <element signature="n#block#2;n#!!top" />
-            <element signature="n#block#3;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/correiocristao/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -389,19 +412,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/index.html">
+    <entry file="file://$PROJECT_DIR$/correiocristao/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" selection-start-column="37" selection-end-column="37" />
+        <state relative-caret-position="358">
+          <caret line="134" column="49" selection-start-line="134" selection-start-column="49" selection-end-line="134" selection-end-column="49" />
+          <folding>
+            <element signature="e#315#324#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/correiocristao/settings.py">
+    <entry file="file://$PROJECT_DIR$/static/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/correiocristao/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="134" column="21" lean-forward="true" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
+        <state relative-caret-position="51">
+          <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/correiocristao/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="73" selection-start-line="73" selection-end-line="73" selection-end-column="18" />
           <folding>
-            <element signature="e#315#324#0" expanded="true" />
+            <element signature="n#block#3;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>

@@ -8,7 +8,7 @@
     <meta name="author" content="HeroDev">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Correio Cristão | O seu informativo no sertão</title>
+    <title>{% block title %}{% endblock %}</title>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CLato:300,400" rel="stylesheet">
@@ -68,7 +68,7 @@
 
     <!-- Center Header -->
     <div id="center-header">
-        <div class="container">
+        <div class="container-fluid">
             <div class="header-logo">
                 <a href="#" class="logo"><img src="{% static 'logo.png' %}" alt=""></a>
             </div>
