@@ -112,7 +112,7 @@
                     </div>
                     {% block mainnav %}
                         <ul class="main-nav nav navbar-nav">
-                                {% if request.path_info == '/home/' %}
+                                {% if request.path_info == '/home/' or  request.path_info == '/' %}
                                     <li class="active">
                                 {% else %}
                                     <li>
