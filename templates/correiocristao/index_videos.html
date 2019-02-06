@@ -1,0 +1,32 @@
+{% load my_tags %}
+
+<div id="owl-carousel-2" class="owl-carousel owl-theme">
+    {% for v in video_list|slice:"0:9" %}
+        <!-- ARTICLE -->
+        <article class="article thumb-article">
+            <div class="article-img">
+                <img src="https://i.ytimg.com/vi/{{ v.link|videocut }}/maxresdefault.jpg" alt=""
+                     style="width: 500px; height: 300px; margin-left:-17%;">
+            </div>
+            <div class="article-body" align="left">
+                <ul class="article-info">
+                    <li class="article-type"><i class="fa fa-video-camera"></i></li>
+                    <li class="article-category"><a>{{ v.categoria }}</a></li>
+                </ul>
+                <ul class="article-meta">
+                    <li><h3 class="article-title"><a href="{% url 'video_detail' pk=v.pk %}">{{ v.nome }}</a></h3></li>
+                </ul>
+            </div>
+        </article>
+        <!-- /ARTICLE -->
+    {% endfor %}
+</div>
+<div class="row">
+    <div class="container" align="right">
+        <div class="article-pagination">
+            <ul>
+                <li class="active"><a class="active" href="{% url 'video_list' %}">Mais &raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -7,10 +7,10 @@
     <meta name="author" content="HeroDev">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>Login | Correio Cristão</title>
-    <link rel="icon" href="{% static '../../media/favicon.png' %}" type="image/png">
+    <link rel="icon" href="{% static 'favicon.png' %}" type="image/png">
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static '../../media/bootstrap/css/bootstrap42.min.css' %}" rel="stylesheet"
+    <link href="{% static 'bootstrap/css/bootstrap42.min.css' %}" rel="stylesheet"
           crossorigin="anonymous">
 
 
@@ -27,11 +27,11 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="{% static '../../media/bootstrap/css/floating-labels.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/floating-labels.css' %}" rel="stylesheet">
 </head>
 <body>
 
-<form action="" method="POST" class="form-signin">{% csrf_token %}
+<form action="" method="POST" enctype="multipart/form-data" class="form-signin">{% csrf_token %}
 
     {% if form.errors %}
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -43,7 +43,7 @@
     {% endif %}
 
     <div class="text-center mb-4">
-        <img class="mb-4" src="{% static '../../media/favicon.png' %}" alt="" width="72" height="72">
+        <img class="mb-4" src="{% static 'favicon.png' %}" alt="" width="72" height="72">
     </div>
     <div class="form-label-group">
         <label for="inputUsername" class="sr-only">Usuário</label>
@@ -71,10 +71,10 @@
 
     <div class="checkbox mb-3">
         <label>
-            Lembre-se de mim: <input type="checkbox" value="remember-me">
+            Lembre-se de mim: <input type="checkbox" value="remember_me">
         </label>
     </div>
-    <input type="hidden" name="next" value="/admin/"/>
+    <input type="hidden" name="next" value="/"/>
     <button class="btn btn-lg btn-primary btn-block" type="submit" id="entrar">Entrar</button>
     <p class="mt-5 mb-3 text-muted text-center">Copyright &copy;{% now "Y" %};
         Correio Cristão. All rights reserved.

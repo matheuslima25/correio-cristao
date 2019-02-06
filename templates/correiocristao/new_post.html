@@ -1,0 +1,19 @@
+{% extends 'correiocristao/base.html' %}
+{% load bootstrap %}
+
+{% block title %}Nova publicação | Correio Cristão{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3" align="center">Nova publicação</h1>
+            <form method="POST" class="post-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|bootstrap_horizontal:'row-lg-2' }}
+                <br/>
+                <button class="btn btn-danger btn-lg center-block" type="submit">Publicar <i class="fa fa-save"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

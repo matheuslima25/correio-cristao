@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['correio-cristao.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['correio-cristao.herokuapp.com', 'localhost', '127.0.0.1', ]
 
 
 # Application definition
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'noticias',
+    'bootstrapform',
+    'el_pagination',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +68,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'noticias.noticias_context_proccesors.featured_posts',
+                'noticias.noticias_context_proccesors.categories',
+                'noticias.noticias_context_proccesors.apoiadores',
             ],
         },
     },
@@ -120,21 +125,28 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
-
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = 'media'
 
 LOGIN_URL = '/login/'
 
-LOGIN_REDIRECT_URL = ''
-
-LOGOUT_REDIRECT_URL = ''
+LOGIN_REDIRECT_URL = '/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
-    'static',
+    os.path.join(BASE_DIR, 'static'),
 ]
+
+STATIC_URL = '/static/'
+
+DEFAULT_FROM_EMAIL = config('EMAIL')
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = config('EMAIL')
+EMAIL_HOST_PASSWORD = config('PASSWORD')
+EMAIL_PORT = 587
+
+EL_PAGINATION_PER_PAGE = 4
 

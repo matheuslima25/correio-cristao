@@ -1,0 +1,17 @@
+{% for c in colunistas_list %}
+    <article class="article thumb-article">
+        <div class="article-img">
+            <img src="{{ c.foto.url }}" alt="{{ c.nome }}-foto" width="300" height="300">
+        </div>
+        <div class="article-body">
+            <h3 class="article-title" style="color: white">{{ c.nome }}</h3>
+            <ul class="article-meta">
+            <li><i class="fa fa-id-card"></i> {{ c.profissao }}</li>
+            </ul>
+            <ul class="article-meta">
+                <li><i class="fa fa-facebook"></i> {{ c.facebook }}</li>
+                <li><i class="fa fa-instagram"></i> {{ c.instagram }}</li>
+            </ul>
+        </div>
+    </article>
+{% endfor %}

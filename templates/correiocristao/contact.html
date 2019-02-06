@@ -1,0 +1,18 @@
+{% extends 'correiocristao/base.html' %}
+{% load bootstrap %}
+
+{% block title %}Contato | Correio Cristão{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3" align="center">Contato</h1>
+        <form method="POST" class="post-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+            <button class="btn btn-danger btn-lg center-block" type="submit">Enviar <i class="fa fa-send"></i></button>
+        </form>
+    </div>
+    </div>
+    <br/>
+{% endblock %}

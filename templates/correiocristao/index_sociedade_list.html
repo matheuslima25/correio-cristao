@@ -1,0 +1,53 @@
+<article class="article">
+    {% for p in sociedade|slice:":1" %}
+        <article class="article">
+            <div class="article-img">
+                <a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}">
+                    <img src="{{ p.imagem.url }}" alt="imagem-{{ p.titulo }}" style="height: 300px; width: 400px;">
+                </a>
+                <ul class="article-info">
+                    <li class="article-type"><i class="fa fa-thumb-tack"></i></li>
+                </ul>
+            </div>
+            <div class="article-body">
+                <h3 class="article-title"><a
+                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}">{{ p.titulo }}</a>
+                </h3>
+                <ul class="article-meta">
+                    <div class="col">
+                        <li><i class="fa fa-user-circle"></i> {{ p.autor }}</li>
+                    </div>
+                    <div class="col">
+                        <li>
+                            <i class="fa fa-clock-o"></i> {{ p.data_publicacao|date:"d/m/Y" }}
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </article>
+    {% endfor %}
+    <!-- ARTICLE -->
+    {% for p in sociedade|slice:"1:4" %}
+        <article class="article widget-article">
+            <div class="article-img">
+                <a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}">
+                    <img src="{{ p.imagem.url }}" alt="imagem-{{ p.titulo }}" style="height: 70px;">
+                </a>
+            </div>
+            <div class="article-body">
+                <h4 class="article-title"><a
+                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}">{{ p.titulo }}</a></h4>
+                <ul class="article-meta">
+                    <li><i class="fa fa-clock-o"></i> {{ p.data_publicacao|date:"d/m/Y" }}</li>
+                    <li><i class="fa fa-user-circle-o"></i> {{ p.autor }}</li>
+                </ul>
+            </div>
+        </article>
+    {% endfor %}
+    {% if forloop.counter == 3 %}
+        <ul class="article-info">
+            <li class="article-category"><a
+                    href="{% url 'category_list' slug=p.categoria.slug %}">Mais &raquo;</a></li>
+        </ul>
+    {% endif %}
+    <!-- /ARTICLE -->

@@ -1,0 +1,37 @@
+{% load static %}
+<div class="col-md-8">
+    <div class="section-title">
+        <h2 class="title">Mundo Cristão</h2>
+    </div>
+    {% for p in mundocristao|slice:":3" %}
+        <article class="article row-article">
+            <div class="article-img">
+                <a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}">
+                    <img src="{{ p.imagem.url }}" alt="imagem-{{ p.titulo }}">
+                </a>
+            </div>
+            <div class="article-body">
+                <ul class="article-info">
+                    <li class="article-category"><a
+                            href="{% url 'category_list' slug=p.categoria.slug %}">{{ p.categoria }}</a></li>
+                    <li class="article-type"><i class="fa fa-file-text"></i></li>
+                </ul>
+                <h3 class="article-title"><a
+                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}"> {{ p.titulo }}</a></h3>
+                <ul class="article-meta">
+                    <li><i class="fa fa-clock-o"></i> {{ p.data_publicacao|date:"d/m/Y" }}</li>
+                    <li><i class="fa fa-user-circle"></i> {{ p.autor }}</li>
+                </ul>
+                <p>{{ p.resumo }}</p>
+            </div>
+        </article>
+        {% if forloop.counter == 3 %}
+            <div class="article-pagination">
+                <ul>
+                    <li class="active"><a
+                            href="{% url 'category_list' slug=p.categoria.slug %}">Mais &raquo;</a></li>
+                </ul>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

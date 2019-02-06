@@ -1,0 +1,43 @@
+{% load static %}
+<!-- Ad widget -->
+<div class="widget center-block hidden-xs">
+    {% for a in apoiadores %}
+        {% if a.ordem == '02' %}
+            <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}" alt="{{ a.nome }}" style="width: 300px; height: 290px">
+        {% endif %}
+    {% endfor %}
+</div>
+<!-- /Ad widget -->
+
+<!-- REDES SOCIAIS -->
+<div class="widget social-widget">
+    <div class="widget-title">
+        <h2 class="title">Continue conectado</h2>
+    </div>
+    <ul>
+        <li><a href="http://facebook.com/correiocristaopb" class="facebook"><i
+                class="fa fa-facebook"></i><br><span>Facebook</span></a>
+        </li>
+        <!-- <li><a href="http://twitter.com" class="twitter"><i class="fa fa-twitter"></i><br><span>Twitter</span></a> -->
+        </li>
+        <li><a href="http://instagram.com/correiocristaopb" class="instagram"><i
+                class="fa fa-instagram"></i><br><span>Instagram</span></a>
+        </li>
+        <!-- <li><a href="http://youtube.com" class="youtube"><i class="fa fa-youtube"></i><br><span>Youtube</span></a> -->
+        </li>
+        <li><a href="https://wa.me/5583996426003" class="whatsapp"><i class="fa fa-whatsapp"></i><br><span>Whatsapp</span></a>
+        </li>
+        <!-- <li><a href="#" class="rss"><i class="fa fa-rss"></i><br><span>RSS</span></a></li> -->
+    </ul>
+</div>
+<!-- /REDES SOCIAIS -->
+
+<!-- Ad widget -->
+<div class="widget center-block hidden-xs">
+    {% for a in apoiadores %}
+        {% if a.ordem == '05' %}
+            <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}" alt="{{ a.nome }}" style="width: 300px; height: 290px">
+        {% endif %}
+    {% endfor %}
+</div>
+<!-- /Ad widget -->

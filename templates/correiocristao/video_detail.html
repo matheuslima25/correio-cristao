@@ -1,0 +1,136 @@
+{% extends 'correiocristao/base.html' %}
+{% load my_tags %}
+{% load static %}
+{% block title %}{{ video.nome }} | Correio Cristão {% endblock %}
+
+{% block meta %}
+    <meta property="og:url" content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
+    <meta property="og:locale" content="pt_BR"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ video.nome }}"/>
+    <meta property="og:description" content="{{ video.nome }}"/>
+    <meta property="og:image" content="https://i.ytimg.com/vi/{{ v.link }}/maxresdefault.jpg"/>
+{% endblock %}
+
+{% block body %}
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2&appId=2079665028953384&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- /Load Facebook SDK for JavaScript -->
+
+    <!-- SECTION -->
+    <div class="section">
+        <!-- CONTAINER -->
+        <div class="container">
+            <!-- ROW -->
+            <div class="row">
+                <!-- Main Column -->
+                <div class="col-md-8">
+
+                    <!-- breadcrumb -->
+                    <ul class="article-breadcrumb">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li>
+                            <a href="#">Vídeos</a>
+                        </li>
+                        <li><a>{{ video.nome }}</a></li>
+                    </ul>
+                    <!-- /breadcrumb -->
+
+                    <!-- ARTICLE POST -->
+                    <article class="article article-post">
+                        <div class="article-share">
+                            <a class="facebook" data-href="http://{{ request.get_host }}{{ request.get_full_path }}"
+                               data-mobile-iframe="true"
+                               href="https://www.facebook.com/sharer/sharer.php?u=http://
+                                       {{ request.get_host }}{{ request.get_full_path }}"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter"><i
+                                    class="fa fa-twitter" data-text="{{ video.nome }}"
+                                    data-url="http://{{ request.get_host }}{{ request.get_full_path }}"
+                                    data-hashtags="correiocristao" data-show-count="false"></i></a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <a href="whatsapp://send?text=http://{{ request.get_host }}{{ request.get_full_path }}"
+                               data-action="share/whatsapp/share" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+                        </div>
+                        {% block video %}
+                            <div class="article-main-img">
+                                <div class="article-img">
+                                    <iframe width="753" height="480"
+                                            src="https://www.youtube.com/embed/{{ video.link|urlcut }}"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="article-body">
+                                <ul class="article-info">
+                                    <li class="article-category"><a href="#">{{ video.categoria }}</a></li>
+                                    <li class="article-type"><i class="fa fa-file-text"></i></li>
+                                </ul>
+                                <h1 class="article-title">{{ video.nome }}</h1>
+                                <ul class="article-meta">
+                                    <li><i class="fa fa-clock-o"></i>{{ video.data_publicacao }}</li>
+                                </ul>
+                            </div>
+                            </article>
+                        {% endblock %}
+                    <!-- /ARTICLE POST -->
+
+                    <!-- reply form -->
+                    <div class="fb-comments" data-href="http://{{ request.get_host }}{{ request.get_full_path }}"
+                         data-numposts="5"></div>
+                    <!-- /reply form -->
+                </div>
+                <!-- /Main Column -->
+
+                <!-- Aside Column -->
+                <div class="col-md-4">
+                    {% include 'correiocristao/aside.html' %}
+                    <!-- Ad widget -->
+                    <div class="widget center-block hidden-xs">
+                        {% for a in apoiadores %}
+                            {% if a.ordem == '04' %}
+                                <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}"
+                                     alt="{{ a.nome }}" style="width: 300px; height: 290px">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <!-- /Ad widget -->
+                </div>
+                <!-- /Aside Column -->
+            </div>
+            <!-- /ROW -->
+        </div>
+        <!-- /CONTAINER -->
+    </div>
+    <!-- /SECTION -->
+
+    <!-- AD SECTION -->
+    {% for a in apoiadores %}
+        {% if a.ordem == '03' %}
+            <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}" alt="{{ a.nome }}"
+                 style="width: 980px; height: 120px">
+        {% endif %}
+    {% endfor %}
+    <!-- /AD SECTION -->
+{% endblock %}
+
