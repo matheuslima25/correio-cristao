@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 from decouple import config
 from dj_database_url import parse as dburl
+import cloudinary  # cloudinary
+import cloudinary.uploader  # cloudinary
+import cloudinary.api  # cloudinary
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
     'noticias',
     'bootstrapform',
     'el_pagination',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -149,4 +153,10 @@ EMAIL_HOST_PASSWORD = config('PASSWORD')
 EMAIL_PORT = 587
 
 EL_PAGINATION_PER_PAGE = 4
+
+cloudinary.config(
+    cloud_name=config('CLOUDNAME'),
+    api_key=config('CLOUDKEY'),
+    api_secret=config('CLOUDSECRET'),
+)
 

@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from cloudinary.models import CloudinaryField
 
 
 class Categoria(models.Model):
@@ -23,7 +24,7 @@ class Publicacao(models.Model):
     data_publicacao = models.DateTimeField(default=timezone.now, verbose_name='Data de publicação')
     destaque = models.BooleanField(default=False)
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING, default='')
-    imagem = models.ImageField(upload_to='noticias/imagens', null=True, blank=True)
+    imagem = CloudinaryField('imagem', null=True, blank=True)
 
     def get_absolute_url(self):
         return reverse('post_detail', kwargs={'pk': self.pk})
@@ -38,7 +39,7 @@ class Publicacao(models.Model):
 
 class Apoiador(models.Model):
     ordem = models.CharField(max_length=2, blank=True, null=True)
-    imagem = models.ImageField()
+    imagem = CloudinaryField('imagem')
     nome = models.CharField(max_length=100)
     site = models.CharField(max_length=200, blank=True, null=True)
 
@@ -50,7 +51,7 @@ class Apoiador(models.Model):
 
 
 class Colunista(models.Model):
-    foto = models.ImageField(upload_to='colunistas/fotos', null=True, blank=True)
+    foto = CloudinaryField('imagem', null=True, blank=True)
     nome = models.CharField(max_length=100)
     profissao = models.CharField(max_length=100, null=True, blank=True)
     facebook = models.CharField(max_length=500, null=True, blank=True)
