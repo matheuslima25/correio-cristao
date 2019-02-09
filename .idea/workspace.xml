@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="463cf11a-8a43-457a-87a2-936826d8c5a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-    </list>
+    <list default="true" id="463cf11a-8a43-457a-87a2-936826d8c5a5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +37,7 @@
     <session id="602908336">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.33" value="1" />
@@ -62,16 +60,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Procfile" value="8" />
+          <entry key="Procfile" value="9" />
           <entry key="css" value="28" />
-          <entry key="env" value="13" />
+          <entry key="env" value="15" />
+          <entry key="git" value="1" />
           <entry key="gitgnore" value="4" />
           <entry key="html" value="237" />
           <entry key="jpg" value="12" />
           <entry key="js" value="4" />
           <entry key="otf" value="1" />
           <entry key="png" value="2" />
-          <entry key="py" value="309" />
+          <entry key="py" value="311" />
           <entry key="rnc" value="1" />
           <entry key="sql" value="1" />
           <entry key="txt" value="26" />
@@ -83,8 +82,8 @@
           <entry key="HTML" value="237" />
           <entry key="Image" value="14" />
           <entry key="JavaScript" value="4" />
-          <entry key="PLAIN_TEXT" value="52" />
-          <entry key="Python" value="309" />
+          <entry key="PLAIN_TEXT" value="56" />
+          <entry key="Python" value="311" />
           <entry key="RNG Compact" value="1" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -115,17 +114,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="128" selection-start-line="7" selection-start-column="128" selection-end-line="7" selection-end-column="128" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -237,7 +226,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -256,22 +245,6 @@
           <expand>
             <path>
               <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -401,18 +374,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitgnore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/destaque_mural.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noticias/migrations/0033_auto_20190208_1153.py" />
-    <entry file="file://$PROJECT_DIR$/noticias/migrations/0032_auto_20190208_1152.py" />
     <entry file="file://$PROJECT_DIR$/noticias/migrations/0031_auto_20190208_1151.py" />
     <entry file="file://$PROJECT_DIR$/noticias/migrations/0023_auto_20190208_0948.py" />
     <entry file="file://$PROJECT_DIR$/noticias/migrations/0024_auto_20190208_0949.py" />
@@ -592,21 +553,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/git">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="130" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/correiocristao/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="45" />
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="45" />
           <folding>
             <element signature="e#315#324#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/correio-cristao/.env">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/correio-cristao/Procfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/correio-cristao/correiocristao/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="128" selection-start-line="7" selection-start-column="128" selection-end-line="7" selection-end-column="128" />
-        </state>
+        <state relative-caret-position="-2348" />
       </provider>
     </entry>
   </component>
