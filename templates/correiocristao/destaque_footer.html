@@ -1,7 +1,7 @@
 {% for p in featured_posts|slice:":3" %}
     {% if p.destaque == True %}
         <div class="article-body">
-            <div class="article-img" style="height: 60px;">
+            <div class="article-img" style="height: 48px;">
                 <a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}">
                     <img src="{{ p.imagem.url }}" alt="">
                 </a>
