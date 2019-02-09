@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="463cf11a-8a43-457a-87a2-936826d8c5a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/noticias/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/noticias/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0002_auto_20190120_1742.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0003_publicacao_destaque.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0004_auto_20190120_1814.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0005_auto_20190120_1823.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0006_categoria_slug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0007_auto_20190121_1636.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0008_publicacao_imagem.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0009_auto_20190129_1030.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0010_colunista_profissao.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0011_publicacao_resumo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0012_apoiador_ordem.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0013_auto_20190204_1101.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0014_auto_20190204_1332.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0015_video.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0016_auto_20190204_2338.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0017_video_data_publicacao.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0018_auto_20190205_2110.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0019_video_categoria.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0020_remove_video_categoria.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0021_video_categoria.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/migrations/0022_auto_20190207_1647.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/noticias/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/correiocristao/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correiocristao/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/correiocristao/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correiocristao/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/correiocristao/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correiocristao/post.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +119,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/correiocristao/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
+            <state relative-caret-position="118">
               <caret line="84" column="120" selection-start-line="84" selection-start-column="120" selection-end-line="84" selection-end-column="120" />
             </state>
           </provider>
@@ -416,7 +386,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007599" side_tool="true" weight="0.22131148" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924013" visible="true" weight="0.26065573" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924013" visible="true" weight="0.6409836" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295082" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -674,7 +644,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/correiocristao/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
+        <state relative-caret-position="118">
           <caret line="84" column="120" selection-start-line="84" selection-start-column="120" selection-end-line="84" selection-end-column="120" />
         </state>
       </provider>
