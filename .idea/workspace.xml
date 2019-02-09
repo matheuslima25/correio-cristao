@@ -2,10 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="463cf11a-8a43-457a-87a2-936826d8c5a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements-dev.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements-dev.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/noticias/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/noticias/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0002_auto_20190120_1742.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0003_publicacao_destaque.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0004_auto_20190120_1814.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0005_auto_20190120_1823.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0006_categoria_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0007_auto_20190121_1636.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0008_publicacao_imagem.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0009_auto_20190129_1030.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0010_colunista_profissao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0011_publicacao_resumo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0012_apoiador_ordem.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0013_auto_20190204_1101.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0014_auto_20190204_1332.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0015_video.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0016_auto_20190204_2338.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0017_video_data_publicacao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0018_auto_20190205_2110.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0019_video_categoria.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0020_remove_video_categoria.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0021_video_categoria.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/migrations/0022_auto_20190207_1647.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/noticias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/noticias/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/correiocristao/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correiocristao/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/correiocristao/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correiocristao/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/correiocristao/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correiocristao/post.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +54,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -37,15 +69,16 @@
     <session id="602908336">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.38" value="2" />
           <entry key="project.open.time.39" value="2" />
+          <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.42" value="2" />
           <entry key="project.open.time.45" value="2" />
-          <entry key="project.open.time.46" value="2" />
+          <entry key="project.open.time.46" value="3" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.48" value="2" />
           <entry key="project.open.time.53" value="1" />
@@ -54,90 +87,70 @@
           <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.70" value="1" />
           <entry key="project.open.time.83" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Procfile" value="6" />
-          <entry key="css" value="27" />
+          <entry key="css" value="28" />
           <entry key="env" value="10" />
           <entry key="gitgnore" value="4" />
-          <entry key="html" value="219" />
+          <entry key="html" value="232" />
           <entry key="jpg" value="12" />
-          <entry key="js" value="1" />
+          <entry key="js" value="4" />
           <entry key="otf" value="1" />
           <entry key="png" value="2" />
-          <entry key="py" value="227" />
+          <entry key="py" value="302" />
           <entry key="rnc" value="1" />
+          <entry key="sql" value="1" />
           <entry key="txt" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="27" />
-          <entry key="HTML" value="219" />
+          <entry key="CSS" value="28" />
+          <entry key="HTML" value="232" />
           <entry key="Image" value="14" />
-          <entry key="JavaScript" value="1" />
+          <entry key="JavaScript" value="4" />
           <entry key="PLAIN_TEXT" value="41" />
-          <entry key="Python" value="227" />
+          <entry key="Python" value="302" />
           <entry key="RNG Compact" value="1" />
+          <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Django Console" value="486" />
+          <entry key="Django Console" value="503" />
           <entry key="Procfile" value="14" />
           <entry key="css" value="125" />
           <entry key="dummy" value="8" />
           <entry key="env" value="107" />
           <entry key="gitgnore" value="5" />
-          <entry key="html" value="13060" />
-          <entry key="py" value="8999" />
+          <entry key="html" value="14166" />
+          <entry key="py" value="10293" />
+          <entry key="sql" value="20" />
           <entry key="txt" value="206" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="125" />
-          <entry key="HTML" value="13060" />
+          <entry key="HTML" value="14166" />
           <entry key="PLAIN_TEXT" value="340" />
-          <entry key="Python" value="9485" />
+          <entry key="Python" value="10796" />
+          <entry key="Scratch" value="20" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/correiocristao/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="266" column="66" selection-start-line="266" selection-start-column="66" selection-end-line="266" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements-dev.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/noticias/models.py">
+        <entry file="file://$PROJECT_DIR$/templates/correiocristao/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <marker date="1549565239930" expanded="true" signature="994:1000" ph="..." />
-                <marker date="1549565239930" expanded="true" signature="2209:2214" ph="..." />
-                <marker date="1549565239930" expanded="true" signature="2520:2526" ph="..." />
-              </folding>
+            <state relative-caret-position="369">
+              <caret line="84" column="120" selection-start-line="84" selection-start-column="120" selection-end-line="84" selection-end-column="120" />
             </state>
           </provider>
         </entry>
@@ -147,18 +160,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Python Script" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>for</find>
-      <find>slice</find>
-      <find>inclu</find>
       <find>fir</find>
       <find>first</find>
       <find>comer</find>
@@ -186,6 +196,9 @@
       <find>devocional</find>
       <find>whats</find>
       <find>article</find>
+      <find>id</find>
+      <find>article-i</find>
+      <find>article-info</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,20 +207,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/correiocristao/success.html" />
-        <option value="$PROJECT_DIR$/correiocristao/noticias_context_proccesors.py" />
-        <option value="$PROJECT_DIR$/templates/correiocristao/colunistas.html" />
-        <option value="$PROJECT_DIR$/templates/correiocristao/privacity.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/about.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/advertisement.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/privacy.html" />
-        <option value="$PROJECT_DIR$/templates/correiocristao/contact.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/new_post.html" />
-        <option value="$PROJECT_DIR$/noticias/forms.py" />
         <option value="$PROJECT_DIR$/static/bootstrap/css/pagination.css" />
         <option value="$PROJECT_DIR$/templates/correiocristao/historiaigreja.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/mundocristao.html" />
-        <option value="$PROJECT_DIR$/templates/correiocristao/destaque_mural.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/list.html" />
         <option value="$PROJECT_DIR$/staticfiles/bootstrap/css/search.css" />
         <option value="$PROJECT_DIR$/templates/correiocristao/pesquisa.html" />
@@ -223,28 +229,35 @@
         <option value="$PROJECT_DIR$/templates/correiocristao/destaque_footer.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/aside.html" />
         <option value="$PROJECT_DIR$/correiocristao/urls.py" />
-        <option value="$PROJECT_DIR$/noticias/admin.py" />
-        <option value="$PROJECT_DIR$/noticias/noticias_context_proccesors.py" />
         <option value="$PROJECT_DIR$/noticias/apps.py" />
         <option value="$PROJECT_DIR$/templates/correiocristao/devocional_category.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/paginator.html" />
         <option value="$PROJECT_DIR$/static/bootstrap/css/style.css" />
         <option value="$PROJECT_DIR$/static/bootstrap/css/paginator.css" />
         <option value="$PROJECT_DIR$/templates/correiocristao/videos.html" />
-        <option value="$PROJECT_DIR$/templates/correiocristao/index.html" />
-        <option value="$PROJECT_DIR$/templates/correiocristao/post.html" />
         <option value="$PROJECT_DIR$/noticias/templatetags/my_tags.py" />
         <option value="$PROJECT_DIR$/templates/correiocristao/video_detail.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/category.html" />
         <option value="$PROJECT_DIR$/noticias/urls.py" />
         <option value="$PROJECT_DIR$/templates/correiocristao/video_list.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/index_videos.html" />
-        <option value="$PROJECT_DIR$/noticias/views.py" />
-        <option value="$PROJECT_DIR$/templates/correiocristao/base.html" />
         <option value="$PROJECT_DIR$/requirements-dev.txt" />
         <option value="$PROJECT_DIR$/correiocristao/settings.py" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/templates/correiocristao/destaque_mural.html" />
+        <option value="$PROJECT_DIR$/templates/correiocristao/index.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/12e3a1a5-6eb5-4966-a8d3-78203f442d92/console.sql" />
+        <option value="$PROJECT_DIR$/noticias/migrations/0032_auto_20190208_1204.py" />
+        <option value="$PROJECT_DIR$/noticias/migrations/0030_auto_20190208_1216.py" />
+        <option value="$PROJECT_DIR$/templates/correiocristao/base.html" />
+        <option value="$PROJECT_DIR$/noticias/noticias_context_proccesors.py" />
         <option value="$PROJECT_DIR$/noticias/models.py" />
+        <option value="$PROJECT_DIR$/noticias/forms.py" />
+        <option value="$PROJECT_DIR$/noticias/admin.py" />
+        <option value="$PROJECT_DIR$/static/bootstrap/js/image_enlarge.js" />
+        <option value="$PROJECT_DIR$/templates/correiocristao/post.html" />
+        <option value="$PROJECT_DIR$/templates/correiocristao/contact.html" />
+        <option value="$PROJECT_DIR$/noticias/views.py" />
       </list>
     </option>
   </component>
@@ -268,16 +281,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
               <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,6 +321,13 @@
             <path>
               <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
               <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -319,23 +335,17 @@
               <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjetoWebServices" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -343,16 +353,16 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\static\img" />
-      <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\noticias\templatetags" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\noticias" />
       <recent name="C:\Users\Matheus\PycharmProjects\correiocristao" />
       <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\static\bootstrap\css" />
       <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\static" />
       <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\media" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\static\img" />
+      <recent name="C:\Users\Matheus\PycharmProjects\correiocristao\noticias\templatetags" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -392,7 +402,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3069909" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3206687" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -408,6 +418,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007599" side_tool="true" weight="0.22131148" />
       <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924013" visible="true" weight="0.26065573" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295082" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -450,200 +461,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/img/ad-4.jpg" />
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/privacy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-338">
-          <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/advertisement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noticias/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bootstrap/css/pagination.css" />
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/mundocristao.html" />
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/colunistas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticfiles/bootstrap/css/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staticfiles/bootstrap/css/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bootstrap/css/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/destaque_mural.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="15" column="95" selection-start-line="15" selection-start-column="95" selection-end-line="15" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="72" selection-start-line="73" selection-start-column="72" selection-end-line="73" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/aside.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/destaque_footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/devocional_category.html" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/pesquisa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bootstrap/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="753" lean-forward="true" selection-start-line="753" selection-end-line="753" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bootstrap/css/paginator.css" />
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/paginator.html" />
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/new_post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/videos.html" />
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/index_devocional_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="45" selection-start-line="45" selection-end-line="50" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/index_mundo_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/index_opiniao_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="44" column="18" lean-forward="true" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/correiocristao/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noticias/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noticias/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noticias/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="88" selection-start-line="9" selection-start-column="88" selection-end-line="9" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noticias/noticias_context_proccesors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noticias/templatetags/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noticias/templatetags/my_tags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/correiocristao/video_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -679,16 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/noticias/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
-          <folding>
-            <marker date="1549459925435" expanded="true" signature="795:801" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/correiocristao/index_historia_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -703,29 +510,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="153" column="37" selection-start-line="153" selection-start-column="37" selection-end-line="153" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitgnore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/correiocristao/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="266" column="66" selection-start-line="266" selection-start-column="66" selection-end-line="266" selection-end-column="66" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
@@ -738,9 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="159" column="37" selection-start-line="159" selection-start-column="37" selection-end-line="159" selection-end-column="37" />
-          <folding>
-            <element signature="e#315#324#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -751,16 +534,148 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/correiocristao/destaque_mural.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0033_auto_20190208_1153.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0032_auto_20190208_1152.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0031_auto_20190208_1151.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0023_auto_20190208_0948.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0024_auto_20190208_0949.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0029_auto_20190208_1218.py" />
+    <entry file="file://$PROJECT_DIR$/myvenv/Lib/site-packages/django/db/backends/sqlite3/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="295" selection-start-line="295" selection-end-line="295" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/12e3a1a5-6eb5-4966-a8d3-78203f442d92/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0033_merge_20190208_1210.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0032_auto_20190208_1204.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0031_auto_20190208_1218.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0031_auto_20190208_1158.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0030_auto_20190208_1223.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0030_auto_20190208_1120.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0029_auto_20190208_1215.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0025_auto_20190208_0958.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0028_auto_20190208_1102.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0027_auto_20190208_1057.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0026_auto_20190208_1044.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0029_auto_20190208_1209.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0029_auto_20190208_1107.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0029_auto_20190208_1214.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0030_auto_20190208_1216.py" />
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noticias/migrations/0002_publicacao_photo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noticias/noticias_context_proccesors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noticias/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="97" selection-start-line="7" selection-start-column="97" selection-end-line="7" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noticias/templatetags/my_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/noticias/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+        <state relative-caret-position="1156">
+          <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noticias/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bootstrap/js/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bootstrap/js/image_enlarge.js" />
+    <entry file="file://$PROJECT_DIR$/templates/correiocristao/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="284" selection-start-line="284" selection-end-line="284" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/correiocristao/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="113" column="100" selection-start-line="113" selection-start-column="100" selection-end-line="113" selection-end-column="100" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1549565239930" expanded="true" signature="994:1000" ph="..." />
-            <marker date="1549565239930" expanded="true" signature="2209:2214" ph="..." />
-            <marker date="1549565239930" expanded="true" signature="2520:2526" ph="..." />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#article#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bootstrap/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="554" column="36" selection-start-line="554" selection-start-column="24" selection-end-line="554" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noticias/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="136" column="92" selection-start-line="136" selection-start-column="92" selection-end-line="136" selection-end-column="92" />
+          <folding>
+            <marker date="1549688124131" expanded="true" signature="795:801" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/correiocristao/category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/correiocristao/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/correiocristao/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="84" column="120" selection-start-line="84" selection-start-column="120" selection-end-line="84" selection-end-column="120" />
         </state>
       </provider>
     </entry>

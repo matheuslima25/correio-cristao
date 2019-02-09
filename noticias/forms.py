@@ -1,13 +1,11 @@
 from django import forms
 from .models import Publicacao
-from django.contrib.auth.forms import AuthenticationForm
-from django.utils.translation import ugettext_lazy as _
 
 
 class PostForm(forms.ModelForm):
     class Meta:
         model = Publicacao
-        fields = ('autor', 'titulo', 'texto', 'resumo', 'categoria', 'imagem', 'destaque')
+        fields = ('autor', 'titulo', 'texto', 'resumo', 'categoria', 'imagem', 'destaque', 'album')
 
 
 class ContactForm(forms.Form):
@@ -18,4 +16,3 @@ class ContactForm(forms.Form):
         widget=forms.Textarea,
         label="Mensagem: "
     )
-
