@@ -20,7 +20,6 @@ import cloudinary.api  # cloudinary
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -30,8 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['correio-cristao.herokuapp.com', 'localhost', '127.0.0.1', 'www.correiocristao.com.br']
-
+ALLOWED_HOSTS = ['correio-cristao.herokuapp.com', 'localhost', '127.0.0.1', 'www.correiocristao.com.br', 'correiocristao.com.br', ]
 
 # Application definition
 
@@ -82,7 +80,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'correiocristao.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
@@ -91,7 +88,6 @@ default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
     'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -111,7 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -124,7 +119,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -159,4 +153,3 @@ cloudinary.config(
     api_key=config('CLOUDKEY'),
     api_secret=config('CLOUDSECRET'),
 )
-
