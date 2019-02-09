@@ -19,9 +19,6 @@ class Colunista(models.Model):
     foto = CloudinaryField('imagem', null=True, blank=True)
     nome = models.CharField(max_length=100)
     profissao = models.CharField(max_length=100, null=True, blank=True, default='')
-    facebook = models.CharField(max_length=500, null=True, blank=True, default='')
-    instagram = models.CharField(max_length=500, null=True, blank=True, default='')
-    telefone = models.CharField(max_length=20, null=True, blank=True, default='')
 
     class Meta:
         verbose_name_plural = 'Colunistas'
