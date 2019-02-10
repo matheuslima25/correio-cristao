@@ -5,7 +5,7 @@ from .models import Publicacao
 class PostForm(forms.ModelForm):
     class Meta:
         model = Publicacao
-        fields = ('autor', 'titulo', 'texto', 'resumo', 'categoria', 'imagem', 'destaque', 'album')
+        fields = ('titulo', 'texto', 'resumo', 'categoria', 'imagem', 'destaque', 'album')
 
 
 class ContactForm(forms.Form):

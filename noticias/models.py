@@ -55,7 +55,6 @@ class Photo(models.Model):
 
 
 class Publicacao(models.Model):
-    autor = models.ForeignKey(Colunista, on_delete=models.DO_NOTHING)
     titulo = models.CharField(max_length=200)
     resumo = models.TextField(max_length=500, default='')
     texto = models.TextField()
@@ -64,14 +63,10 @@ class Publicacao(models.Model):
     destaque = models.BooleanField(default=False)
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING, default='')
     imagem = CloudinaryField('Imagem', null=True, blank=True)
-    album = models.ForeignKey('Album', blank=True, null=True, on_delete=models.CASCADE)
+    album = models.ForeignKey('Album', blank=True, null=True, on_delete=models.DO_NOTHING)
 
     def get_absolute_url(self):
         return reverse('post_detail', kwargs={'pk': self.pk})
-
-    @property
-    def autor_name(self):
-        return self.autor.nome
 
     class Meta:
         verbose_name = 'Publicação'

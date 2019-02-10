@@ -20,7 +20,6 @@
                         href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}"> {{ p.titulo }}</a></h3>
                 <ul class="article-meta">
                     <li><i class="fa fa-clock-o"></i> {{ p.data_publicacao|date:"d/m/Y" }}</li>
-                    <li><i class="fa fa-user-circle"></i> {{ p.autor }}</li>
                 </ul>
                 <p>{{ p.resumo }}</p>
             </div>

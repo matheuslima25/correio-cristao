@@ -3,12 +3,24 @@
 {% block title %}{{ publicacao.titulo }} | Correio Cristão {% endblock %}
 
 {% block meta %}
-    <meta property="og:url" content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
+    <!-- Facebook-->
+    <meta property="og:url" content="{{ request.build_absolute_uri }}"/>
     <meta property="og:locale" content="pt_BR"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ publicacao.titulo }}"/>
     <meta property="og:description" content="{{ publicacao.resumo }}"/>
     <meta property="og:image" content="{{ publicacao.imagem.url }}"/>
+    <!-- /Facebook -->
+    <!-- Twitter -->
+    <meta property=twitter:url content="{{ request.build_absolute_uri }}"/>
+    <meta property=twitter:card content=summary />
+    <meta property=twitter:title content="{{ publicacao.titulo }} | Correio Cristão"/>
+    <meta property=twitter:description content="{{ publicacao.resumo }}"/>
+    <meta property=twitter:image content="{ publicacao.imagem.url }}"/>
+    <!-- /Twitter -->
+    <!-- SEO -->
+    <meta name=description content="{{ publicacao.resumo }}"/>
+    <!-- /SEO -->
 {% endblock %}
 
 {% block body %}
@@ -65,7 +77,7 @@
                                                   data-url="{{ request.build_absolute_uri }}"
                                                   data-hashtags="correiocristao" data-show-count="false"></i></a>
                             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            <a href="whatsapp://send?text={{ request.build_absolute_uri }}"
+                            <a href="whatsapp://send?text={{ publicacao.resumo }}{{ request.build_absolute_uri }}"
                                data-action="share/whatsapp/share" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
                         </div>
                         {% block post %}
