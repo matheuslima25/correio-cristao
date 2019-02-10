@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="463cf11a-8a43-457a-87a2-936826d8c5a5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,15 +65,15 @@
         <counts>
           <entry key="Procfile" value="9" />
           <entry key="css" value="28" />
-          <entry key="env" value="15" />
+          <entry key="env" value="16" />
           <entry key="git" value="1" />
-          <entry key="gitgnore" value="4" />
+          <entry key="gitgnore" value="5" />
           <entry key="html" value="237" />
           <entry key="jpg" value="12" />
           <entry key="js" value="4" />
           <entry key="otf" value="1" />
           <entry key="png" value="2" />
-          <entry key="py" value="311" />
+          <entry key="py" value="313" />
           <entry key="rnc" value="1" />
           <entry key="sql" value="1" />
           <entry key="txt" value="30" />
@@ -84,8 +85,8 @@
           <entry key="HTML" value="237" />
           <entry key="Image" value="14" />
           <entry key="JavaScript" value="4" />
-          <entry key="PLAIN_TEXT" value="60" />
-          <entry key="Python" value="311" />
+          <entry key="PLAIN_TEXT" value="62" />
+          <entry key="Python" value="313" />
           <entry key="RNG Compact" value="1" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -96,10 +97,10 @@
           <entry key="Procfile" value="30" />
           <entry key="css" value="125" />
           <entry key="dummy" value="8" />
-          <entry key="env" value="168" />
-          <entry key="gitgnore" value="5" />
+          <entry key="env" value="246" />
+          <entry key="gitgnore" value="6" />
           <entry key="html" value="14173" />
-          <entry key="py" value="10343" />
+          <entry key="py" value="10424" />
           <entry key="sql" value="20" />
           <entry key="txt" value="215" />
         </counts>
@@ -108,15 +109,46 @@
         <counts>
           <entry key="CSS" value="125" />
           <entry key="HTML" value="14173" />
-          <entry key="PLAIN_TEXT" value="426" />
-          <entry key="Python" value="10846" />
+          <entry key="PLAIN_TEXT" value="505" />
+          <entry key="Python" value="10927" />
           <entry key="Scratch" value="20" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/correiocristao/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+              <folding>
+                <element signature="e#315#324#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitgnore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -163,12 +195,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/correiocristao" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/correiocristao/new_post.html" />
         <option value="$PROJECT_DIR$/static/bootstrap/css/pagination.css" />
         <option value="$PROJECT_DIR$/templates/correiocristao/historiaigreja.html" />
         <option value="$PROJECT_DIR$/templates/correiocristao/mundocristao.html" />
@@ -215,10 +246,11 @@
         <option value="$PROJECT_DIR$/templates/correiocristao/colunistas.html" />
         <option value="$PROJECT_DIR$/correiocristao/urls.py" />
         <option value="$PROJECT_DIR$/templates/correiocristao/destaque_footer.html" />
-        <option value="$PROJECT_DIR$/correiocristao/settings.py" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/.gitgnore" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/correiocristao/settings.py" />
       </list>
     </option>
   </component>
@@ -252,22 +284,6 @@
             <path>
               <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
               <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="correiocristao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="correiocristao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -336,6 +352,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33662614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -351,7 +368,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007599" side_tool="true" weight="0.22131148" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924013" visible="true" weight="0.6704918" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924013" visible="true" weight="0.44918033" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295082" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -397,7 +414,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/noticias/migrations/0023_auto_20190208_0948.py" />
     <entry file="file://$PROJECT_DIR$/noticias/migrations/0024_auto_20190208_0949.py" />
     <entry file="file://$PROJECT_DIR$/noticias/migrations/0029_auto_20190208_1218.py" />
     <entry file="file://$PROJECT_DIR$/myvenv/Lib/site-packages/django/db/backends/sqlite3/base.py">
@@ -548,13 +564,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/git" />
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="130" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/correio-cristao/.env" />
     <entry file="file://$PROJECT_DIR$/correio-cristao/Procfile" />
     <entry file="file://$PROJECT_DIR$/correio-cristao/correiocristao/settings.py" />
@@ -562,16 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/correiocristao/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1778">
-          <caret line="31" column="130" selection-start-line="31" selection-start-column="130" selection-end-line="31" selection-end-column="130" />
-          <folding>
-            <element signature="e#315#324#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -596,6 +595,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="118" column="43" lean-forward="true" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitgnore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/correiocristao/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="e#315#324#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
