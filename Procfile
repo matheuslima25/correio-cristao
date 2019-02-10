@@ -1,2 +1,2 @@
 web: gunicorn correiocristao.wsgi --log-file -
-web: gunicorn correiocristao:app
+web: gunicorn correio-cristao:app
