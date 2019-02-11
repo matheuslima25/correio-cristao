@@ -78,7 +78,7 @@
                                                   data-url="{{ request.build_absolute_uri }}"
                                                   data-hashtags="correiocristao" data-show-count="false"></i></a>
                             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            <a href="whatsapp://send?text={{ publicacao.resumo }}{{ request.build_absolute_uri }}"
+                            <a href="https://api.whatsapp.com/send?text={{ publicacao.titulo }}, veja mais: {{ request.build_absolute_uri }}"
                                data-action="share/whatsapp/share" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
                         </div>
                         {% block post %}
@@ -125,12 +125,12 @@
                                                                     </a>
                                                                     <ul class="article-info" style="top: 15px;">
                                                                         <li class="article-type" data-toggle="modal"
-                                                                            data-target="#myModal"><i
+                                                                            data-target="#myModal{{ p.image.pk }}{{forloop.counter0}}"><i
                                                                                 class="fa fa-expand"></i></li>
                                                                     </ul>
                                                                 </div>
                                                             </article>
-                                                            <div id="myModal" class="modal fade" tabindex="-1"
+                                                            <div id="myModal{{ p.image.pk }}{{forloop.counter0}}" class="modal fade"
                                                                  role="dialog" aria-labelledby="myModalLabel"
                                                                  aria-hidden="true">
                                                                 <div class="modal-dialog">
