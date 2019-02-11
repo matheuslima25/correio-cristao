@@ -13,7 +13,7 @@
     <!-- /Facebook -->
     <!-- Twitter -->
     <meta property=twitter:url content="{{ request.build_absolute_uri }}"/>
-    <meta property=twitter:card content=summary />
+    <meta property=twitter:card content=summary/>
     <meta property=twitter:title content="{{ publicacao.titulo }} | Correio Cristão"/>
     <meta property=twitter:description content="{{ publicacao.resumo }}"/>
     <meta property=twitter:image content="{ publicacao.imagem.url }}"/>
@@ -69,8 +69,9 @@
                     <article class="article article-post">
                         <div class="article-share">
                             <a class="facebook" data-href="{{ request.build_absolute_uri }}"
-                               data-mobile-iframe="true"
-                               href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"><i
+                               data-layout="icon_link" data-mobile-iframe="false"
+                               href="javascript: void(0);"
+                               onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i
                                     class="fa fa-facebook"></i></a>
                             <a href="https://twitter.com/share?ref_src={{ request.build_absolute_uri }}"
                                class="twitter"><i class="fa fa-twitter" data-text="{{ publicacao.resumo }}"
@@ -123,7 +124,8 @@
                                                                              alt="foto-{{ publicacao.titulo|lower }}-{{ forloop.counter }}">
                                                                     </a>
                                                                     <ul class="article-info" style="top: 15px;">
-                                                                        <li class="article-type" data-toggle="modal" data-target="#myModal"><i
+                                                                        <li class="article-type" data-toggle="modal"
+                                                                            data-target="#myModal"><i
                                                                                 class="fa fa-expand"></i></li>
                                                                     </ul>
                                                                 </div>
