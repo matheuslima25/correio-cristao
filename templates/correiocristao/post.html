@@ -67,20 +67,6 @@
 
                     <!-- ARTICLE POST -->
                     <article class="article article-post">
-                        <div class="article-share">
-                            <a class="facebook" data-href="{{ request.build_absolute_uri }}"
-                               data-layout="icon_link" data-mobile-iframe="false"
-                               href="javascript: void(0);"
-                               onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i
-                                    class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/share?ref_src={{ request.build_absolute_uri }}"
-                               class="twitter"><i class="fa fa-twitter" data-text="{{ publicacao.resumo }}"
-                                                  data-url="{{ request.build_absolute_uri }}"
-                                                  data-hashtags="correiocristao" data-show-count="false"></i></a>
-                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            <a href="https://api.whatsapp.com/send?text={{ publicacao.titulo }}, veja mais: {{ request.build_absolute_uri }}"
-                               data-action="share/whatsapp/share" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
-                        </div>
                         {% block post %}
                             <div class="article-main-img">
                                 <img src="{{ publicacao.imagem.url }}" alt="image-{{ publicacao.titulo }}">
@@ -98,6 +84,21 @@
                                    style="font-size: 18px">{{ publicacao.texto|linebreaksbr|urlize }}</p>
                             </div>
                             </article>
+                            <div class="article-share">
+                                <a class="facebook" data-href="{{ request.build_absolute_uri }}"
+                                   data-layout="icon_link" data-mobile-iframe="false"
+                                   href="javascript: void(0);"
+                                   onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/share?ref_src={{ request.build_absolute_uri }}"
+                                   class="twitter"><i class="fa fa-twitter" data-text="{{ publicacao.resumo }}"
+                                                      data-url="{{ request.build_absolute_uri }}"
+                                                      data-hashtags="correiocristao" data-show-count="false"></i></a>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <a href="https://api.whatsapp.com/send?text={{ publicacao.titulo }}, veja mais: {{ request.build_absolute_uri }}"
+                                   data-action="share/whatsapp/share" class="whatsapp"><i
+                                        class="fa fa-whatsapp"></i></a>
+                            </div>
                             {% if publicacao.album.photo_set.all %}
                                 <div class="section">
                                     <!-- CONTAINER -->
@@ -125,12 +126,16 @@
                                                                     </a>
                                                                     <ul class="article-info" style="top: 15px;">
                                                                         <li class="article-type" data-toggle="modal"
-                                                                            data-target="#myModal{{ p.image.pk }}{{forloop.counter0}}"><i
-                                                                                class="fa fa-expand"></i></li>
+                                                                            data-target="#myModal
+
+                                                                                    {{ p.image.pk }}{{ forloop.counter0 }}">
+                                                                            <i
+                                                                                    class="fa fa-expand"></i></li>
                                                                     </ul>
                                                                 </div>
                                                             </article>
-                                                            <div id="myModal{{ p.image.pk }}{{forloop.counter0}}" class="modal fade"
+                                                            <div id="myModal{{ p.image.pk }}{{ forloop.counter0 }}"
+                                                                 class="modal fade"
                                                                  role="dialog" aria-labelledby="myModalLabel"
                                                                  aria-hidden="true">
                                                                 <div class="modal-dialog">
