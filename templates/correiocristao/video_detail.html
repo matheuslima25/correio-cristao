@@ -73,7 +73,7 @@
                         </div>
                         {% block video %}
                             <div class="article-main-img">
-                                <div class="article-img">
+                                <div class="article-img" style="position: relative;">
                                     <iframe width="753" height="480"
                                             src="https://www.youtube.com/embed/{{ video.link|urlcut }}"
                                             frameborder="0"
@@ -128,7 +128,7 @@
     {% for a in apoiadores %}
         {% if a.ordem == '03' %}
             <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}" alt="{{ a.nome }}"
-                 style="width: 980px; height: 120px">
+                 style="width: 980px; height: 120px; max-width: 500px;">
         {% endif %}
     {% endfor %}
     <!-- /AD SECTION -->
