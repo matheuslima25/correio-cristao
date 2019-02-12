@@ -192,7 +192,7 @@
     {% for a in apoiadores %}
         {% if a.ordem == '03' %}
             <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}" alt="{{ a.nome }}"
-                 style="width: 980px; height: 120px; max-width: 500px;">
+                 style="width: 980px; max-width: 100%; min-width: 300px; height: auto;">
         {% endif %}
     {% endfor %}
     <!-- /AD SECTION -->
