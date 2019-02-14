@@ -121,28 +121,19 @@
                                                             <article class="article">
                                                                 <div class="article-img">
                                                                     <a>
-                                                                        <img src="{{ p.image.url }}"
-                                                                             alt="foto-{{ publicacao.titulo|lower }}-{{ forloop.counter }}">
+                                                                        <img src="{{ p.image.url }}" alt="foto-{{ publicacao.titulo|lower }}-{{ forloop.counter }}">
                                                                     </a>
                                                                     <ul class="article-info" style="top: 15px;">
-                                                                        <li class="article-type" data-toggle="modal"
-                                                                            data-target="#myModal
-
-                                                                                    {{ p.image.pk }}{{ forloop.counter0 }}">
-                                                                            <i
-                                                                                    class="fa fa-expand"></i></li>
+                                                                        <li class="article-type" data-toggle="modal" data-target="#myModal{{ p.image.pk }}{{ forloop.counter0 }}">
+                                                                            <i class="fa fa-expand"></i></li>
                                                                     </ul>
                                                                 </div>
                                                             </article>
-                                                            <div id="myModal{{ p.image.pk }}{{ forloop.counter0 }}"
-                                                                 class="modal fade"
-                                                                 role="dialog" aria-labelledby="myModalLabel"
-                                                                 aria-hidden="true">
+                                                            <div id="myModal{{ p.image.pk }}{{ forloop.counter0 }}" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
                                                                         <div class="modal-body">
-                                                                            <img src="{{ p.image.url }}"
-                                                                                 class="img-responsive">
+                                                                            <img src="{{ p.image.url }}" class="img-responsive">
                                                                         </div>
                                                                     </div>
                                                                 </div>
