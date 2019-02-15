@@ -1,11 +1,13 @@
 {% load static %}
 <!-- Ad widget -->
-<div class="widget center-block hidden-xs">
+<div class="publicidade-aside">
+<br/>
     {% for a in apoiadores %}
         {% if a.ordem == '02' %}
             <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}" alt="{{ a.nome }}" style="width: 300px; height: 290px">
         {% endif %}
     {% endfor %}
+<br/>
 </div>
 <!-- /Ad widget -->
 
@@ -33,11 +35,13 @@
 <!-- /REDES SOCIAIS -->
 
 <!-- Ad widget -->
-<div class="widget center-block hidden-xs">
+<div class="publicidade-aside">
+    <br/>
     {% for a in apoiadores %}
         {% if a.ordem == '05' %}
             <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}" alt="{{ a.nome }}" style="width: 300px; height: 290px">
         {% endif %}
     {% endfor %}
+    <br/>
 </div>
 <!-- /Ad widget -->

@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="https://res.cloudinary.com/herodev/image/upload/t_media_lib_thumb/v1549809722/favicon.png" type="image/png">
+    <link rel="icon" href="https://res.cloudinary.com/herodev/image/upload/t_media_lib_thumb/v1549809722/favicon.png"
+          type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="HeroDev">
+    <meta name="author" content="D'Lima | Soluções Web">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block meta %}
     {% endblock %}
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -52,24 +54,22 @@
                         <li><a href="{% url 'about' %}">Sobre nós</a></li>
                         <li><a href="{% url 'contact' %}">Contato</a></li>
                         <li><a href="{% url 'comercial' %}">Comercial</a></li>
-                        <ul class="nav navbar-nav navbar-right">
-                            {% if user.is_authenticated %}
-                                <li>
-                                    <a href="{% url 'post_new' %}"><i class="fa fa-plus"></i>Nova publicação</a>
-                                </li>
-                                <li>
-                                    <a href="{% url 'admin:index' %}"><i class="fa fa-television"></i>Painel</a>
-                                </li>
-                                <li>
-                                    <a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i>Log out</a>
-                                </li>
-                                <li>
-                                    <a>Bem-vindo: {{ user.username }}</a>
-                                    {% else %}
-                                </li>
-                                <li><a href="{% url 'entrar' %}"><i class="fa fa-sign-in"></i> Login</a></li>
-                                </ul>
-                            {% endif %}
+                        {% if user.is_authenticated %}
+                            <li>
+                                <a href="{% url 'post_new' %}"><i class="fa fa-plus"></i>Nova publicação</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'admin:index' %}"><i class="fa fa-television"></i>Painel</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i>Log out</a>
+                            </li>
+                            <li>
+                                <a>Bem-vindo(a): {{ user.username }}</a>
+                                {% else %}
+                            </li>
+                            <li><a href="{% url 'entrar' %}"><i class="fa fa-sign-in"></i> Login</a></li>
+                        {% endif %}
                     </ul>
                 </div>
                 <div class="header-social">
@@ -78,7 +78,7 @@
                         <!--<li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>-->
                         <li><a href="http://instagram.com/correiocristaopb"><i class="fa fa-instagram"></i></a></li>
                         <!--<li><a href="http://youtube.com"><i class="fa fa-youtube"></i></a></li>-->
-                        <li><a href="https://wa.me/5583996426003" class="whatsapp"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><a href="https://wa.me/5583996426003"><i class="fa fa-whatsapp"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -89,13 +89,14 @@
         <div id="center-header">
             <div class="container-fluid">
                 <div class="header-logo">
-                    <a href="{% url 'home' %}" class="logo"><img src="{% static 'logo.png' %}" alt="logo" style="max-width: 500px"></a>
+                    <a href="{% url 'home' %}" class="logo"><img src="{% static 'logo.png' %}" alt="logo"
+                                                                 style="max-width: 500px"></a>
                 </div>
-                <div class="header-ads">
+                <div class="header-publicidade">
                     {% for a in apoiadores %}
                         {% if a.ordem == '01' %}
                             <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}" alt="{{ a.nome }}"
-                                 style="width: 728px; height: 90px">
+                                 style="width: 500px; max-width: 100%; max-height: 100%;">
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -112,19 +113,19 @@
                     </div>
                     {% block mainnav %}
                         <ul class="main-nav nav navbar-nav">
-                                {% if request.path_info == '/home/' or  request.path_info == '/' %}
-                                    <li class="active">
-                                {% else %}
-                                    <li>
-                                {% endif %}
+                            {% if request.path_info == '/home/' or  request.path_info == '/' %}
+                                <li class="active">
+                                    {% else %}
+                                <li>
+                            {% endif %}
                             <a href="{% url 'home' %}">Início</a></li>
                             {% for c in categories %}
                                 {% if request.resolver_match.kwargs.slug == c.slug %}
                                     <li class="active">
-                                {% else %}
+                                        {% else %}
                                     <li>
                                 {% endif %}
-                                <a href="{% url 'category_list' slug=c.slug %}">{{ c.nome }}</a></li>
+                            <a href="{% url 'category_list' slug=c.slug %}">{{ c.nome }}</a></li>
                             {% endfor %}
                         </ul>
                     {% endblock %}
@@ -186,7 +187,8 @@
                                 <li><a href="http://instagram.com/correiocristaopb" class="instagram"><i
                                         class="fa fa-instagram"></i></a></li>
                                 <!--<li><a href="http://youtube.com" class="youtube"><i class="fa fa-youtube"></i></a></li>-->
-                                <li><a href="https://wa.me/5583996426003" class="whatsapp"><i class="fa fa-whatsapp"></i></a></li>
+                                <li><a href="https://wa.me/5583996426003" class="whatsapp"><i
+                                        class="fa fa-whatsapp"></i></a></li>
                                 <!--<li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>-->
                             </ul>
                         </div>
