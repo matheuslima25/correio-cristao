@@ -31,7 +31,7 @@ class HomeView(generic.ListView):
             '-data_publicacao')
         context['mundocristao'] = Publicacao.objects.filter(categoria__slug='mundocristao').order_by(
             '-data_publicacao')
-        context['sociedade'] = Publicacao.objects.filter(categoria__slug='sociedade').order_by(
+        context['saude'] = Publicacao.objects.filter(categoria__slug='saude').order_by(
             '-data_publicacao')
         context['opiniao'] = Publicacao.objects.filter(categoria__slug='opiniao').order_by(
             '-data_publicacao')
@@ -59,7 +59,7 @@ class CategoryView(generic.ListView):
             '-data_publicacao')
         context['mundocristao'] = Publicacao.objects.filter(categoria__slug='mundocristao').order_by(
             '-data_publicacao')
-        context['sociedade'] = Publicacao.objects.filter(categoria__slug='sociedade').order_by(
+        context['saude'] = Publicacao.objects.filter(categoria__slug='saude').order_by(
             '-data_publicacao')
         context['opiniao'] = Publicacao.objects.filter(categoria__slug='opiniao').order_by(
             '-data_publicacao')

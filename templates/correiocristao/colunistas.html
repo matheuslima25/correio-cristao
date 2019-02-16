@@ -1,13 +1,15 @@
-{% for c in colunistas_list %}
-    <article class="article thumb-article">
-        <div class="article-img">
-            <img src="{{ c.foto.url }}" alt="{{ c.nome }}-foto" width="300" height="300">
-        </div>
-        <div class="article-body">
-            <h3 class="article-title" style="color: white">{{ c.nome }}</h3>
-            <ul class="article-meta">
-            <li><i class="fa fa-id-card"></i> {{ c.profissao }}</li>
-            </ul>
-        </div>
-    </article>
-{% endfor %}
+<div id="owl-carousel-4" class="owl-carousel owl-theme">
+    {% for c in colunistas_list %}
+        <article class="article thumb-article">
+            <div class="article-img">
+                <img src="{{ c.foto.url }}" alt="{{ c.nome }}-foto" width="300" height="300">
+            </div>
+            <div class="article-body">
+                <h3 class="article-title" style="color: white">{{ c.nome }}</h3>
+                <ul class="article-meta">
+                    <li><i class="fa fa-id-card"></i> {{ c.profissao }}</li>
+                </ul>
+            </div>
+        </article>
+    {% endfor %}
+</div>
