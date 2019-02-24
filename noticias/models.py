@@ -92,6 +92,7 @@ class Apoiador(models.Model):
 class Video(models.Model):
     nome = models.CharField(max_length=50, default='')
     link = models.URLField()
+    imagem = CloudinaryField('Imagem', null=True, blank=True)
     data_publicacao = models.DateTimeField(default=timezone.now, verbose_name='Data de publicação')
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING, default='')
 

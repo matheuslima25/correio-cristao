@@ -119,14 +119,10 @@
                                                         <div class="col-md-3 col-sm-6">
                                                             <!-- ARTICLE -->
                                                             <article class="article">
-                                                                <div class="article-img">
+                                                                <div>
                                                                     <a>
-                                                                        <img src="{{ p.image.url }}" alt="foto-{{ publicacao.titulo|lower }}-{{ forloop.counter }}">
+                                                                        <img src="{{ p.image.url }}" alt="foto-{{ publicacao.titulo|lower }}-{{ forloop.counter }}" data-toggle="modal" data-target="#myModal{{ p.image.pk }}{{ forloop.counter0 }}" style="width: 250px; height: 250px">
                                                                     </a>
-                                                                    <ul class="article-info" style="top: 15px;">
-                                                                        <li class="article-type" data-toggle="modal" data-target="#myModal{{ p.image.pk }}{{ forloop.counter0 }}">
-                                                                            <i class="fa fa-expand"></i></li>
-                                                                    </ul>
                                                                 </div>
                                                             </article>
                                                             <div id="myModal{{ p.image.pk }}{{ forloop.counter0 }}" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

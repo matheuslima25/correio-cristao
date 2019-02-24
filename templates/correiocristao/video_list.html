@@ -11,9 +11,15 @@
         <main role="main" class="container">
             <div class="jumbotron">
                 <article class="article thumb-article">
-                    <div class="article-img">
-                        <img src="https://i.ytimg.com/vi/{{ v.link|videocut }}/maxresdefault.jpg" alt="image-{{ v.nome }}" style="height: 500px">
-                    </div>
+                    {% if v.imagem %}
+                        <div class="article-img">
+                            <img src="{{ v.imagem.url }}" alt="image-{{ v.nome }}" style="height: 500px">
+                        </div>
+                    {% else %}
+                        <div class="article-img">
+                            <img src="https://i.ytimg.com/vi/{{ v.link|videocut }}/maxresdefault.jpg" alt="image-{{ v.nome }}" style="height: 500px">
+                        </div>
+                    {% endif %}
                     <ul class="article-meta">
                         <div class="col">
                             <li><i class="fa fa-book"></i> {{ v.categoria }}</li>
