@@ -4,10 +4,15 @@
     {% for v in video_list|slice:"0:9" %}
         <!-- ARTICLE -->
         <article class="article thumb-article">
-            <div class="article-img">
-                <img src="https://i.ytimg.com/vi/{{ v.link|videocut }}/maxresdefault.jpg" alt=""
-                     style="width: 500px; height: 300px; margin-left:-17%;">
-            </div>
+            {% if v.imagem %}
+                <div class="article-img">
+                    <img src="{{ v.imagem.url }}" alt="image-{{ v.nome }}" style="width: 500px; height: 300px; margin-left:-17%;">
+                </div>
+            {% else %}
+                <div class="article-img">
+                    <img src="https://i.ytimg.com/vi/{{ v.link|videocut }}/maxresdefault.jpg" alt="" style="width: 500px; height: 300px; margin-left:-17%;">
+                </div>
+            {% endif %}
             <div class="article-body" align="left">
                 <ul class="article-info">
                     <li class="article-type"><i class="fa fa-video-camera"></i></li>
