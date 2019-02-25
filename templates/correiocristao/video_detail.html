@@ -9,11 +9,7 @@
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ video.nome }}"/>
     <meta property="og:description" content="{{ video.nome }}"/>
-    {% if video.imagem %}
-        <meta property="og:image" content="{{ video.imagem }}"/>
-    {% else %}
-        <meta property="og:image" content="https://i.ytimg.com/vi/{{ video.link|urlcut }}/maxresdefault.jpg"/>
-    {% endif %}
+    <meta property="og:image" content="https://i.ytimg.com/vi/{{ video.link|urlcut }}/maxresdefault.jpg"/>
 {% endblock %}
 
 {% block css %}
