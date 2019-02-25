@@ -12,6 +12,10 @@
     <meta property="og:image" content="https://i.ytimg.com/vi/{{ video.link|urlcut }}/maxresdefault.jpg"/>
 {% endblock %}
 
+{% block css %}
+    <link type="text/css" rel="stylesheet" href="{% static 'bootstrap/css/socialbuttons.css' %}"/>
+{% endblock %}
+
 {% block body %}
 
     <!-- Load Facebook SDK for JavaScript -->
@@ -58,7 +62,7 @@
                     <!-- ARTICLE POST -->
                     <article class="article article-post">
                         {% block video %}
-                            <div class="article-share">
+                            <div class="share-social">
                             <a class="facebook" data-href="{{ request.build_absolute_uri }}"
                                data-layout="icon_link" data-mobile-iframe="false"
                                href="javascript: void(0);"

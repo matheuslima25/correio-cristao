@@ -1,0 +1,31 @@
+.share-social > a {
+	display:inline-block;
+	width:45px;
+	height:45px;
+	line-height:45px;
+	font-size:12.5px;
+	text-align:center;
+	background-color:#222;
+	color:#FFF;
+}
+
+.share-social > a.facebook {
+	color: #FFF;
+	background-color: #3b5999;
+}
+
+.share-social > a.twitter {
+	color: #FFF;
+	background-color:#00aced;
+    margin-left: -3px
+}
+
+.share-social > a.whatsapp {
+	color: #FFF;
+	background-color:#25d366;
+    margin-left: -3px
+}
+
+.share-social > a:hover {
+	opacity:0.8;
+}
