@@ -1004,7 +1004,7 @@ textarea.input {
 	Article Share
 \*------------------------------------*/
 .article-share {
-	position:absolute;
+	position:relative;
 	left:-45px;
 	top:0;
 }

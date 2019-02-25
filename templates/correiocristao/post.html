@@ -68,6 +68,21 @@
                     <!-- ARTICLE POST -->
                     <article class="article article-post">
                         {% block post %}
+                            <div class="article-share">
+                                <a class="facebook" data-href="{{ request.build_absolute_uri }}"
+                                   data-layout="icon_link" data-mobile-iframe="false"
+                                   href="javascript: void(0);"
+                                   onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/share?ref_src={{ request.build_absolute_uri }}"
+                                   class="twitter"><i class="fa fa-twitter" data-text="{{ publicacao.resumo }}"
+                                                      data-url="{{ request.build_absolute_uri }}"
+                                                      data-hashtags="correiocristao" data-show-count="false"></i></a>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <a href="https://api.whatsapp.com/send?text={{ publicacao.titulo }}, veja mais: {{ request.build_absolute_uri }}"
+                                   data-action="share/whatsapp/share" class="whatsapp"><i
+                                        class="fa fa-whatsapp"></i></a>
+                            </div>
                             <div class="article-main-img">
                                 <img src="{{ publicacao.imagem.url }}" alt="image-{{ publicacao.titulo }}">
                             </div>
@@ -84,21 +99,6 @@
                                    style="font-size: 18px">{{ publicacao.texto|linebreaksbr|urlize }}</p>
                             </div>
                             </article>
-                            <div class="article-share">
-                                <a class="facebook" data-href="{{ request.build_absolute_uri }}"
-                                   data-layout="icon_link" data-mobile-iframe="false"
-                                   href="javascript: void(0);"
-                                   onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i
-                                        class="fa fa-facebook"></i></a>
-                                <a href="https://twitter.com/share?ref_src={{ request.build_absolute_uri }}"
-                                   class="twitter"><i class="fa fa-twitter" data-text="{{ publicacao.resumo }}"
-                                                      data-url="{{ request.build_absolute_uri }}"
-                                                      data-hashtags="correiocristao" data-show-count="false"></i></a>
-                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                <a href="https://api.whatsapp.com/send?text={{ publicacao.titulo }}, veja mais: {{ request.build_absolute_uri }}"
-                                   data-action="share/whatsapp/share" class="whatsapp"><i
-                                        class="fa fa-whatsapp"></i></a>
-                            </div>
                             {% if publicacao.album.photo_set.all %}
                                 <div class="section">
                                     <!-- CONTAINER -->
