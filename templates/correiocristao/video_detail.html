@@ -4,12 +4,27 @@
 {% block title %}{{ video.nome }} | Correio Cristão {% endblock %}
 
 {% block meta %}
+    <!-- Facebook -->
     <meta property="og:url" content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
     <meta property="og:locale" content="pt_BR"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ video.nome }}"/>
     <meta property="og:description" content="{{ video.nome }}"/>
-    <meta property="og:image" content="https://i.ytimg.com/vi/{{ video.link|urlcut }}/maxresdefault.jpg"/>
+    {% if video.imagem %}
+        <meta property="og:image" content="{{ video.imagem.url }}"/>
+    {% else %}
+        <meta property="og:image" content="https://i.ytimg.com/vi/{{ video.link|urlcut }}/maxresdefault.jpg"/>
+    {% endif %}
+    <!-- /Facebook -->
+    <!-- Twitter -->
+    <meta property=twitter:url content="{{ request.build_absolute_uri }}"/>
+    <meta property=twitter:title content="{{ publicacao.titulo }} | Correio Cristão"/>
+    <meta property=twitter:description content="{{ publicacao.resumo }}"/>
+    <meta property=twitter:image content="{{ publicacao.imagem.url }}"/>
+    <!-- /Twitter -->
+    <!-- SEO -->
+    <meta name=description content="{{ publicacao.resumo }}"/>
+    <!-- /SEO -->
 {% endblock %}
 
 {% block css %}

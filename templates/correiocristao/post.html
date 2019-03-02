@@ -13,10 +13,9 @@
     <!-- /Facebook -->
     <!-- Twitter -->
     <meta property=twitter:url content="{{ request.build_absolute_uri }}"/>
-    <meta property=twitter:card content=summary/>
     <meta property=twitter:title content="{{ publicacao.titulo }} | Correio Cristão"/>
     <meta property=twitter:description content="{{ publicacao.resumo }}"/>
-    <meta property=twitter:image content="{ publicacao.imagem.url }}"/>
+    <meta property=twitter:image content="{{ publicacao.imagem.url }}"/>
     <!-- /Twitter -->
     <!-- SEO -->
     <meta name=description content="{{ publicacao.resumo }}"/>
