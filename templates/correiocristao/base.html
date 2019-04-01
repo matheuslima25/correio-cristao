@@ -54,6 +54,7 @@
                         <li><a href="{% url 'about' %}">Sobre nós</a></li>
                         <li><a href="{% url 'contact' %}">Contato</a></li>
                         <li><a href="{% url 'comercial' %}">Comercial</a></li>
+                        <li><a href="{% url 'doacao' %}">Contribua</a></li>
                         {% if user.is_authenticated %}
                             <li>
                                 <a href="{% url 'post_new' %}"><i class="fa fa-plus"></i>Nova publicação</a>
@@ -251,6 +252,7 @@
                             <li><a href="{% url 'about' %}">Sobre nós</a></li>
                             <li><a href="{% url 'contact' %}">Contato</a></li>
                             <li><a href="{% url 'comercial' %}">Comercial</a></li>
+                            <li><a href="{% url 'doacao' %}">Contribua</a></li>
                             <li><a href="{% url 'privacidade' %}">Privacidade</a></li>
                         </ul>
                     </div>

@@ -17,5 +17,6 @@ urlpatterns = [
     path('pesquisar/', views.pesquisar, name='search'),
     path('privacidade/', views.PrivacyView.as_view(), name='privacidade'),
     path('lista/video/', views.VideoView.as_view(), name='video_list'),
+    path('doacao/', views.DoacaoView.as_view(), name='doacao'),
     path('lista/<slug:slug>/', views.CategoryView.as_view(), name='category_list'),
 ]

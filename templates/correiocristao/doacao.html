@@ -1,0 +1,32 @@
+{% extends 'correiocristao/base.html' %}
+
+{% block title %}Doação | Correio Cristão{% endblock %}
+
+{% block body %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3" align="center">Gostou? Ajude-nos!</h1>
+            <br/>
+            <p align="justify">O portal Correio Cristão é um site produzido com recursos próprios e sem fins lucrativos,
+                porém , temos custos operacionais que precisam ser custeados e precisamos da ajuda dos irmãos para
+                manter este informativo.
+                Ajude-nos a manter o Correio Cristão, faça sua doação de qualquer valor pelo PagSeguro, clique no botão
+                abaixo e faça sua contribuição com segurança.</p>
+            <div class="container" align="center">
+                <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                <form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+                    <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                    <input type="hidden" name="currency" value="BRL"/>
+                    <input type="hidden" name="receiverEmail" value="jose_matheus_lima@hotmail.com"/>
+                    <input type="hidden" name="iot" value="button"/>
+                    <input type="image"
+                           src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/209x48-doar-assina.gif"
+                           name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!"/>
+                </form>
+                <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -101,6 +101,10 @@ class PrivacyView(TemplateView):
     template_name = 'correiocristao/privacy.html'
 
 
+class DoacaoView(TemplateView):
+    template_name = 'correiocristao/doacao.html'
+
+
 def contact(request):
     if request.method == 'GET':
         form = ContactForm()
