@@ -58,6 +58,7 @@ class Publicacao(models.Model):
     titulo = models.CharField(max_length=200)
     resumo = models.TextField(max_length=500, default='')
     texto = models.TextField()
+    video_post = models.URLField('Video', null=True, blank=True)
     data_criacao = models.DateTimeField(default=timezone.now, verbose_name='Data de criação')
     data_publicacao = models.DateTimeField(default=timezone.now, verbose_name='Data de publicação')
     destaque = models.BooleanField(default=False)

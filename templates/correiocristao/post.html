@@ -1,29 +1,31 @@
 {% extends 'correiocristao/base.html' %}
-{% load static %}
+{% load static %}{% load my_tags %}
 {% block title %}{{ publicacao.titulo }} | Correio Cristão {% endblock %}
 
 {% block meta %}
-    <!-- Facebook-->
-    <meta property="og:url" content="{{ request.build_absolute_uri }}"/>
+<!-- Facebook -->
+    <meta property="og:url" content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
     <meta property="og:locale" content="pt_BR"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ publicacao.titulo }}"/>
     <meta property="og:description" content="{{ publicacao.resumo }}"/>
+
     <meta property="og:image" content="{{ publicacao.imagem.url }}"/>
-    <!-- /Facebook -->
-    <!-- Twitter -->
-    <meta property=twitter:url content="{{ request.build_absolute_uri }}"/>
-    <meta property=twitter:title content="{{ publicacao.titulo }} | Correio Cristão"/>
+
+<!-- /Facebook -->
+<!-- Twitter -->
+    <meta property=twitter:url content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
+    <meta property=twitter:title content="{{ publicacao.titulo }}}"/>
     <meta property=twitter:description content="{{ publicacao.resumo }}"/>
     <meta property=twitter:image content="{{ publicacao.imagem.url }}"/>
-    <!-- /Twitter -->
-    <!-- SEO -->
-    <meta name=description content="{{ publicacao.resumo }}"/>
-    <!-- /SEO -->
+<!-- /Twitter -->
+<!-- SEO -->
+    <meta name=description content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
+<!-- /SEO -->
 {% endblock %}
 
 {% block css %}
-    <link type="text/css" rel="stylesheet" href="{% static 'bootstrap/css/socialbuttons.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="/static/bootstrap/css/socialbuttons.css"/>
 {% endblock %}
 
 {% block body %}
@@ -70,22 +72,19 @@
 
                     <!-- ARTICLE POST -->
                     <article class="article article-post">
+                        <div class="share-social">
+                            <a class="facebook" data-href="{{ request.build_absolute_uri }}"
+                               data-mobile-iframe="true"
+                               href="javascript: void(0);"onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/share?ref_src={{ request.build_absolute_uri }}"
+                               class="twitter"><i class="fa fa-twitter" data-text="{{ publicacao.titulo }}"
+                                                  data-url="{{ request.build_absolute_uri }}"
+                                                  data-hashtags="correiocristao" data-show-count="false"></i></a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <a href="whatsapp://send?text={{ request.build_absolute_uri }}"
+                               data-action="share/whatsapp/share" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+                        </div>
                         {% block post %}
-                            <div class="share-social">
-                                <a class="facebook" data-href="{{ request.build_absolute_uri }}"
-                                   data-layout="icon_link" data-mobile-iframe="false"
-                                   href="javascript: void(0);"
-                                   onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i
-                                        class="fa fa-facebook"></i></a>
-                                <a href="https://twitter.com/share?ref_src={{ request.build_absolute_uri }}"
-                                   class="twitter"><i class="fa fa-twitter" data-text="{{ publicacao.resumo }}"
-                                                      data-url="{{ request.build_absolute_uri }}"
-                                                      data-hashtags="correiocristao" data-show-count="false"></i></a>
-                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                <a href="https://api.whatsapp.com/send?text={{ publicacao.titulo }}, veja mais: {{ request.build_absolute_uri }}"
-                                   data-action="share/whatsapp/share" class="whatsapp"><i
-                                        class="fa fa-whatsapp"></i></a>
-                            </div>
                             <div class="article-main-img">
                                 <img src="{{ publicacao.imagem.url }}" alt="image-{{ publicacao.titulo }}">
                             </div>
@@ -97,9 +96,14 @@
                                 <h1 class="article-title">{{ publicacao.titulo }}</h1>
                                 <ul class="article-meta">
                                     <li><i class="fa fa-clock-o"></i>{{ publicacao.data_publicacao|date:'d/m/Y' }}</li>
+                                    <li><i class="fa fa-user-circle-o"></i>{{ publicacao.autor }}</li>
                                 </ul>
                                 <p align="justify"
                                    style="font-size: 18px">{{ publicacao.texto|linebreaksbr|urlize }}</p>
+                            <br/>
+                                {% if publicacao.video_post %}
+                                    <div>{{ publicacao.video_post|youtube_embed_url|safe }}</div>
+                                {% endif %}
                             </div>
                             </article>
                             {% if publicacao.album.photo_set.all %}
@@ -122,17 +126,25 @@
                                                         <div class="col-md-3 col-sm-6">
                                                             <!-- ARTICLE -->
                                                             <article class="article">
-                                                                <div>
+                                                                <div class="article-img">
                                                                     <a>
-                                                                        <img src="{{ p.image.url }}" alt="foto-{{ publicacao.titulo|lower }}-{{ forloop.counter }}" data-toggle="modal" data-target="#myModal{{ p.image.pk }}{{ forloop.counter0 }}" style="width: 250px; height: 250px">
+                                                                        <img src="{{ p.image.url }}"
+                                                                             alt="foto-{{ publicacao.titulo|lower }}-{{ forloop.counter }}">
                                                                     </a>
+                                                                    <ul class="article-info" style="top: 15px;">
+                                                                        <li class="article-type" data-toggle="modal" data-target="#myModal"><i
+                                                                                class="fa fa-expand"></i></li>
+                                                                    </ul>
                                                                 </div>
                                                             </article>
-                                                            <div id="myModal{{ p.image.pk }}{{ forloop.counter0 }}" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div id="myModal" class="modal fade" tabindex="-1"
+                                                                 role="dialog" aria-labelledby="myModalLabel"
+                                                                 aria-hidden="true">
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
                                                                         <div class="modal-body">
-                                                                            <img src="{{ p.image.url }}" class="img-responsive">
+                                                                            <img src="{{ p.image.url }}"
+                                                                                 class="img-responsive">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -165,15 +177,13 @@
                 <div class="col-md-4">
                     {% include 'correiocristao/aside.html' %}
                     <!-- Ad widget -->
-                    <div class="post-publicidade">
-                    <br/>
+                    <div class="widget center-block hidden-xs">
                         {% for a in apoiadores %}
                             {% if a.ordem == '04' %}
                                 <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}"
                                      alt="{{ a.nome }}" style="width: 300px; height: 290px">
                             {% endif %}
                         {% endfor %}
-                    <br/>
                     </div>
                     <!-- /Ad widget -->
                 </div>
@@ -189,7 +199,7 @@
     {% for a in apoiadores %}
         {% if a.ordem == '03' %}
             <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}" alt="{{ a.nome }}"
-                 style="width: 500px; max-height: 100%; max-width: 100%; overflow: hidden;">
+                 style="width: 980px; height: 120px">
         {% endif %}
     {% endfor %}
     <!-- /AD SECTION -->

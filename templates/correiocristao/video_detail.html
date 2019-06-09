@@ -4,31 +4,29 @@
 {% block title %}{{ video.nome }} | Correio Cristão {% endblock %}
 
 {% block meta %}
-    <!-- Facebook -->
+<!-- Facebook -->
     <meta property="og:url" content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
     <meta property="og:locale" content="pt_BR"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ video.nome }}"/>
     <meta property="og:description" content="{{ video.nome }}"/>
-    {% if video.imagem %}
-        <meta property="og:image" content="{{ video.imagem.url }}"/>
-    {% else %}
-        <meta property="og:image" content="https://i.ytimg.com/vi/{{ video.link|urlcut }}/maxresdefault.jpg"/>
-    {% endif %}
-    <!-- /Facebook -->
-    <!-- Twitter -->
-    <meta property=twitter:url content="{{ request.build_absolute_uri }}"/>
-    <meta property=twitter:title content="{{ publicacao.titulo }} | Correio Cristão"/>
-    <meta property=twitter:description content="{{ publicacao.resumo }}"/>
-    <meta property=twitter:image content="{{ publicacao.imagem.url }}"/>
-    <!-- /Twitter -->
-    <!-- SEO -->
-    <meta name=description content="{{ publicacao.resumo }}"/>
-    <!-- /SEO -->
+
+    <meta property="og:image" content="https://i.ytimg.com/vi/{{ v.link }}/maxresdefault.jpg"/>
+
+<!-- /Facebook -->
+<!-- Twitter -->
+    <meta property=twitter:url content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
+    <meta property=twitter:title content="{{ video.nome }}"/>
+    <meta property=twitter:description content="{{ video.nome }}"/>
+    <meta property=twitter:image content="https://i.ytimg.com/vi/{{ v.link }}/maxresdefault.jpg"/>
+<!-- /Twitter -->
+<!-- SEO -->
+    <meta name=description content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
+<!-- /SEO -->
 {% endblock %}
 
 {% block css %}
-    <link type="text/css" rel="stylesheet" href="{% static 'bootstrap/css/socialbuttons.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="/static/bootstrap/css/socialbuttons.css"/>
 {% endblock %}
 
 {% block body %}
@@ -76,29 +74,21 @@
 
                     <!-- ARTICLE POST -->
                     <article class="article article-post">
-                        {% block video %}
-                            <div class="share-social">
+                        <div class="share-social">
                             <a class="facebook" data-href="{{ request.build_absolute_uri }}"
-                               data-layout="icon_link" data-mobile-iframe="false"
-                               href="javascript: void(0);"
-                               onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i
-                                    class="fa fa-facebook"></i></a>
+                               data-mobile-iframe="true"
+                               href="javascript: void(0);"onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-facebook"></i></a>
                             <a href="https://twitter.com/share?ref_src={{ request.build_absolute_uri }}"
-                               class="twitter"><i class="fa fa-twitter" data-text="{{ video.nome }}"
+                               class="twitter"><i class="fa fa-twitter" data-text="{{ publicacao.titulo }}"
                                                   data-url="{{ request.build_absolute_uri }}"
                                                   data-hashtags="correiocristao" data-show-count="false"></i></a>
                             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            <a href="https://api.whatsapp.com/send?text={{ video.nome }}, veja mais: {{ request.build_absolute_uri }}"
+                            <a href="whatsapp://send?text={{ request.build_absolute_uri }}"
                                data-action="share/whatsapp/share" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
-                            </div>
+                        </div>
+                        {% block video %}
                             <div class="article-main-img">
-                                <div class="article-img">
-                                    <iframe style="width: 753px; height: 480px; max-width: 100%; min-width: 400px; position: relative !important;"
-                                            src="https://www.youtube.com/embed/{{ video.link|urlcut }}"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                </div>
+                                {{ video.link|youtube_embed_url|safe }}
                             </div>
                             <div class="article-body">
                                 <ul class="article-info">
@@ -147,7 +137,7 @@
     {% for a in apoiadores %}
         {% if a.ordem == '03' %}
             <img class="center-block" href="{{ a.site }}" src="{{ a.imagem.url }}" alt="{{ a.nome }}"
-                 style="width: 980px; max-width: 100%; min-width: 300px; height: auto;">
+                 style="width: 980px; height: 120px">
         {% endif %}
     {% endfor %}
     <!-- /AD SECTION -->
