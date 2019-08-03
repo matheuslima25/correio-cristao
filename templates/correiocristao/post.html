@@ -3,7 +3,7 @@
 {% block title %}{{ publicacao.titulo }} | Correio Cristão {% endblock %}
 
 {% block meta %}
-<!-- Facebook -->
+    <!-- Facebook -->
     <meta property="og:url" content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
     <meta property="og:locale" content="pt_BR"/>
     <meta property="og:type" content="article"/>
@@ -12,16 +12,17 @@
 
     <meta property="og:image" content="{{ publicacao.imagem.url }}"/>
 
-<!-- /Facebook -->
-<!-- Twitter -->
-    <meta property=twitter:url content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
+    <!-- /Facebook -->
+    <!-- Twitter -->
+    <meta property=twitter:url
+          content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
     <meta property=twitter:title content="{{ publicacao.titulo }}}"/>
     <meta property=twitter:description content="{{ publicacao.resumo }}"/>
     <meta property=twitter:image content="{{ publicacao.imagem.url }}"/>
-<!-- /Twitter -->
-<!-- SEO -->
+    <!-- /Twitter -->
+    <!-- SEO -->
     <meta name=description content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
-<!-- /SEO -->
+    <!-- /SEO -->
 {% endblock %}
 
 {% block css %}
@@ -75,13 +76,15 @@
                         <div class="share-social">
                             <a class="facebook" data-href="{{ request.build_absolute_uri }}"
                                data-mobile-iframe="true"
-                               href="javascript: void(0);"onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-facebook"></i></a>
+                               href="javascript: void(0);"
+                               onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i
+                                    class="fa fa-facebook"></i></a>
                             <a href="https://twitter.com/share?ref_src={{ request.build_absolute_uri }}"
                                class="twitter"><i class="fa fa-twitter" data-text="{{ publicacao.titulo }}"
                                                   data-url="{{ request.build_absolute_uri }}"
                                                   data-hashtags="correiocristao" data-show-count="false"></i></a>
                             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            <a href="whatsapp://send?text={{ request.build_absolute_uri }}"
+                            <a href="" onclick="popupFunction('https://wa.me/?text={{ request.build_absolute_uri }}')"
                                data-action="share/whatsapp/share" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
                         </div>
                         {% block post %}
@@ -100,7 +103,7 @@
                                 </ul>
                                 <p align="justify"
                                    style="font-size: 18px">{{ publicacao.texto|linebreaksbr|urlize }}</p>
-                            <br/>
+                                <br/>
                                 {% if publicacao.video_post %}
                                     <div>{{ publicacao.video_post|youtube_embed_url|safe }}</div>
                                 {% endif %}
@@ -123,28 +126,23 @@
                                                 <div class="row">
                                                     {% for p in publicacao.album.photo_set.all %}
                                                         <!-- Column 1 -->
-                                                        <div class="col-md-3 col-sm-6">
+                                                        <div class="col-md-2 col-sm-6">
                                                             <!-- ARTICLE -->
                                                             <article class="article">
                                                                 <div class="article-img">
-                                                                    <a>
-                                                                        <img src="{{ p.image.url }}"
-                                                                             alt="foto-{{ publicacao.titulo|lower }}-{{ forloop.counter }}">
+                                                                    <a data-toggle="modal" data-target="#myModal-{{ p.id }}">
+                                                                        <img id="photo" src="{{ p.image.url }}" alt="foto-{{ publicacao.titulo|lower }}-{{ forloop.counter }}" >
                                                                     </a>
-                                                                    <ul class="article-info" style="top: 15px;">
-                                                                        <li class="article-type" data-toggle="modal" data-target="#myModal"><i
-                                                                                class="fa fa-expand"></i></li>
-                                                                    </ul>
                                                                 </div>
                                                             </article>
-                                                            <div id="myModal" class="modal fade" tabindex="-1"
+                                                            <div id="myModal-{{ p.id }}" class="modal fade"
+                                                                 tabindex="-1"
                                                                  role="dialog" aria-labelledby="myModalLabel"
                                                                  aria-hidden="true">
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
                                                                         <div class="modal-body">
-                                                                            <img src="{{ p.image.url }}"
-                                                                                 class="img-responsive">
+                                                                            <img src="{{ p.image.url }}" class="img-responsive">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -203,5 +201,6 @@
         {% endif %}
     {% endfor %}
     <!-- /AD SECTION -->
+    <script src="{% static 'bootstrap/js/custom.js' %}"></script>
 {% endblock %}
 

@@ -4,25 +4,30 @@
 {% block title %}{{ video.nome }} | Correio Cristão {% endblock %}
 
 {% block meta %}
-<!-- Facebook -->
+    <!-- Facebook -->
     <meta property="og:url" content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
     <meta property="og:locale" content="pt_BR"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ video.nome }}"/>
     <meta property="og:description" content="{{ video.nome }}"/>
 
-    <meta property="og:image" content="https://i.ytimg.com/vi/{{ v.link }}/maxresdefault.jpg"/>
+    <meta property="og:image"
+            {% if video.imagem %}
+                content="{{ video.imagem.url }}"/>
+            {% else %}
+                content="https://i.ytimg.com/vi/{{ v.link }}/maxresdefault.jpg"/>
+            {% endif %}
 
-<!-- /Facebook -->
-<!-- Twitter -->
+    <!-- /Facebook -->
+    <!-- Twitter -->
     <meta property=twitter:url content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
     <meta property=twitter:title content="{{ video.nome }}"/>
     <meta property=twitter:description content="{{ video.nome }}"/>
     <meta property=twitter:image content="https://i.ytimg.com/vi/{{ v.link }}/maxresdefault.jpg"/>
-<!-- /Twitter -->
-<!-- SEO -->
+    <!-- /Twitter -->
+    <!-- SEO -->
     <meta name=description content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
-<!-- /SEO -->
+    <!-- /SEO -->
 {% endblock %}
 
 {% block css %}
@@ -77,13 +82,15 @@
                         <div class="share-social">
                             <a class="facebook" data-href="{{ request.build_absolute_uri }}"
                                data-mobile-iframe="true"
-                               href="javascript: void(0);"onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i class="fa fa-facebook"></i></a>
+                               href="javascript: void(0);"
+                               onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');"><i
+                                    class="fa fa-facebook"></i></a>
                             <a href="https://twitter.com/share?ref_src={{ request.build_absolute_uri }}"
                                class="twitter"><i class="fa fa-twitter" data-text="{{ publicacao.titulo }}"
                                                   data-url="{{ request.build_absolute_uri }}"
                                                   data-hashtags="correiocristao" data-show-count="false"></i></a>
                             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            <a href="whatsapp://send?text={{ request.build_absolute_uri }}"
+                            <a href="" onclick="popupFunction('https://wa.me/?text={{ request.build_absolute_uri }}')"
                                data-action="share/whatsapp/share" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
                         </div>
                         {% block video %}
@@ -141,5 +148,6 @@
         {% endif %}
     {% endfor %}
     <!-- /AD SECTION -->
+    <script src="{% static 'bootstrap/js/custom.js' %}"></script>
 {% endblock %}
 

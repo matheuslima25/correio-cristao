@@ -35,6 +35,8 @@ class HomeView(generic.ListView):
             '-data_publicacao')
         context['opiniao'] = Publicacao.objects.filter(categoria__slug='opiniao').order_by(
             '-data_publicacao')
+        context['jovem'] = Publicacao.objects.filter(categoria__slug='jovem').order_by(
+            '-data_publicacao')
         # Add any other variables to the context here
 
         return context
@@ -62,6 +64,8 @@ class CategoryView(generic.ListView):
         context['saude'] = Publicacao.objects.filter(categoria__slug='saude').order_by(
             '-data_publicacao')
         context['opiniao'] = Publicacao.objects.filter(categoria__slug='opiniao').order_by(
+            '-data_publicacao')
+        context['jovem'] = Publicacao.objects.filter(categoria__slug='jovem').order_by(
             '-data_publicacao')
         # Add any other variables to the context here
 
@@ -170,7 +174,7 @@ class VideoDetailView(DetailView):
     model = Video
     template_name = 'correiocristao/video_detail.html'
 
-    def video_detail(self, slug, pk):
+    def video_detail(self, pk):
         video = get_object_or_404(Video, pk=pk)
         return render(self, 'correiocristao/video_detail.html', {'video': video})
 

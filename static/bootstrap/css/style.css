@@ -244,6 +244,7 @@ textarea.input {
 	padding: 25px 15px;
 	color: #FFF;
 	text-transform: uppercase;
+    font-size: 12px;
 }
 
 .main-nav li.active a {
@@ -515,17 +516,13 @@ textarea.input {
 	display:block;
 }
 
+#photo{
+    height: 100px;
+    width: 100px;
+}
+
 .article .article-img > a:after {
-	content:"";
-	position:absolute;
-	left:0;
-	top:0;
-	right:0;
-	bottom:0;
-	background: #222;
-	opacity:0;
-	-webkit-transition:0.2s opacity;
-	transition:0.2s opacity;
+
 }
 
 .article:hover .article-img > a:after {
@@ -1307,6 +1304,8 @@ textarea.input {
 		top:15px;
 		left:15px;
 	}
+	#content-desktop {display: none;}
+    .header-publicidade {padding-bottom: 10px; padding-top: 5px;}
 }
 
 @media only screen and (max-width: 480px) {

@@ -25,7 +25,8 @@
                         <p class="lead">{{ p.resumo }}</p>
                         <div class="text-right">
                             <ul class="article-info">
-                                <li class="article-category"><a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
+                                <li class="article-category"><a
+                                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
                                     &raquo;</a></li>
                             </ul>
                         </div>
@@ -80,7 +81,8 @@
                         <p class="lead">{{ p.resumo }}</p>
                         <div class="text-right">
                             <ul class="article-info">
-                                <li class="article-category"><a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
+                                <li class="article-category"><a
+                                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
                                     &raquo;</a></li>
                             </ul>
                         </div>
@@ -135,7 +137,8 @@
                         <p class="lead">{{ p.resumo }}</p>
                         <div class="text-right">
                             <ul class="article-info">
-                                <li class="article-category"><a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
+                                <li class="article-category"><a
+                                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
                                     &raquo;</a></li>
                             </ul>
                         </div>
@@ -190,7 +193,8 @@
                         <p class="lead">{{ p.resumo }}</p>
                         <div class="text-right">
                             <ul class="article-info">
-                                <li class="article-category"><a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
+                                <li class="article-category"><a
+                                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
                                     &raquo;</a></li>
                             </ul>
                         </div>
@@ -245,7 +249,8 @@
                         <p class="lead">{{ p.resumo }}</p>
                         <div class="text-right">
                             <ul class="article-info">
-                                <li class="article-category"><a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
+                                <li class="article-category"><a
+                                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
                                     &raquo;</a></li>
                             </ul>
                         </div>
@@ -300,7 +305,8 @@
                         <p class="lead">{{ p.resumo }}</p>
                         <div class="text-right">
                             <ul class="article-info">
-                                <li class="article-category"><a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
+                                <li class="article-category"><a
+                                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
                                     &raquo;</a></li>
                             </ul>
                         </div>
@@ -355,7 +361,63 @@
                         <p class="lead">{{ p.resumo }}</p>
                         <div class="text-right">
                             <ul class="article-info">
-                                <li class="article-category"><a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
+                                <li class="article-category"><a
+                                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
+                                    &raquo;</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </main>
+        {% endfor %}
+        {% get_pages %}
+        <!-- pagination-->
+        <div class="container" align="center">
+            <div class="article-pagination">
+                <ul>
+                    {% if pages.previous %}
+                        <li><a href="?page={{ pages.previous.number }}">&laquo;</a></li>
+                    {% else %}
+                        <li class="disabled"><a class="disabled">&laquo;</a></li>
+                    {% endif %}
+                    {% for page in pages %}
+                        {% if page.is_current %}
+                            <li class="active"><a class="active">{{ page.number }} <span
+                                    class="sr-only">(current)</span></a></li>
+                        {% else %}
+                            <li><a class="disabled" href="?page={{ page.number }}">{{ page.number }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if pages.next %}
+                        <li><a class="active" href="?page={{ pages.next.number }}">&raquo;</a></li>
+                    {% else %}
+                        <li class="disabled"><a class="disabled">&raquo;</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        <!-- end pagination-->}
+    {% elif request.resolver_match.kwargs.slug == 'jovem' %}
+        {% paginate jovem %}
+        {% for p in jovem %}
+            <main role="main" class="container">
+                <div class="jumbotron">
+                    <article class="article thumb-article">
+                        <div class="article-img">
+                            <img src="{{ p.imagem.url }}" alt="image-{{ p.titulo }}" style="height: 500px">
+                        </div>
+                        <ul class="article-meta">
+                            <div class="col">
+                                <li><i class="fa fa-book"></i> {{ p.categoria }}</li>
+                                <li><i class="fa fa-clock-o">{{ p.data_publicacao|date:"d/m/Y" }}</i></li>
+                            </div>
+                            <h2>{{ p.titulo }}</h2>
+                        </ul>
+                        <p class="lead">{{ p.resumo }}</p>
+                        <div class="text-right">
+                            <ul class="article-info">
+                                <li class="article-category"><a
+                                        href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}" role="button">Mais
                                     &raquo;</a></li>
                             </ul>
                         </div>

@@ -1,5 +1,5 @@
 <article class="article">
-    {% for p in opiniao|slice:":1" %}
+    {% for p in jovem|slice:":1" %}
         <article class="article">
             <div class="article-img">
                 <a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}">
@@ -24,7 +24,7 @@
         </article>
     {% endfor %}
     <!-- ARTICLE -->
-    {% for p in opiniao|slice:"1:4" %}
+    {% for p in jovem|slice:"1:4" %}
         <article class="article widget-article">
             <div class="article-img">
                 <a href="{% url 'post_detail' slug=p.categoria.slug pk=p.pk %}">
