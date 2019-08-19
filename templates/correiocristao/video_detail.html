@@ -5,28 +5,36 @@
 
 {% block meta %}
     <!-- Facebook -->
-    <meta property="og:url" content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
-    <meta property="og:locale" content="pt_BR"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="{{ video.nome }}"/>
-    <meta property="og:description" content="{{ video.nome }}"/>
+    <meta property="og:url" content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type"   content="article" />
+    <meta property="og:title" content="{{ publicacao.titulo }}" />
+    <meta property="og:description" content="{{ publicacao.resumo }}" />
+    <meta property="og:site_name"  content="http://correiocristao.com.br" />
 
-    <meta property="og:image"
+    <meta property="og:image" itemprop="image"
             {% if video.imagem %}
                 content="{{ video.imagem.url }}"/>
             {% else %}
                 content="https://i.ytimg.com/vi/{{ v.link }}/maxresdefault.jpg"/>
             {% endif %}
 
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+
     <!-- /Facebook -->
+
     <!-- Twitter -->
-    <meta property=twitter:url content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
-    <meta property=twitter:title content="{{ video.nome }}"/>
-    <meta property=twitter:description content="{{ video.nome }}"/>
-    <meta property=twitter:image content="https://i.ytimg.com/vi/{{ v.link }}/maxresdefault.jpg"/>
+    <meta property=twitter:url
+          content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
+    <meta property=twitter:title content="{{ publicacao.titulo }}"/>
+    <meta property=twitter:description content="{{ publicacao.resumo }}"/>
+    <meta property=twitter:image content="{{ publicacao.imagem.url }}"/>
     <!-- /Twitter -->
+
     <!-- SEO -->
-    <meta name=description content="http://correiocristao.com.br/{{ video.categoria.slug }}/{{ video.pk }}"/>
+    <meta name=description content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
     <!-- /SEO -->
 {% endblock %}
 
