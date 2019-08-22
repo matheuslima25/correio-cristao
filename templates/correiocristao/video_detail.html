@@ -5,7 +5,7 @@
 
 {% block meta %}
     <!-- Facebook -->
-    <meta property="og:url" content="http://correiocristao.com.br/{{ publicacao.categoria.slug }}/{{ publicacao.pk }}"/>
+    <meta property="og:url" content="http://correiocristao.com.br/home/video/{{ video.pk }}"/>
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type"   content="article" />
     <meta property="og:title" content="{{ publicacao.titulo }}" />
@@ -14,6 +14,12 @@
 
     <meta property="og:image" itemprop="image"
             {% if video.imagem %}
+                content="{{ video.imagem.url }}"/>
+            {% else %}
+                content="https://i.ytimg.com/vi/{{ v.link }}/maxresdefault.jpg"/>
+            {% endif %}
+
+    <meta property="og:image:secure_url" content= {% if video.imagem %}
                 content="{{ video.imagem.url }}"/>
             {% else %}
                 content="https://i.ytimg.com/vi/{{ v.link }}/maxresdefault.jpg"/>
